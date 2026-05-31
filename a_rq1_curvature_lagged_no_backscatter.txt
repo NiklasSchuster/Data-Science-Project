@@ -1,0 +1,2492 @@
+2026-03-16 21:56:47,549 - Logging initialized. Saving to: logs/model_logs_2026-03-16_21-56-47.txt
+2026-03-16 21:56:52,257 - Modelling curvature40
+2026-03-16 21:56:57,002 - gpi: 2891016, lat: -14.444256782531738, lon: 132.8800048828125
+2026-03-16 21:56:57,014 - Training data size: 7040
+2026-03-16 21:56:57,014 - Testing data size: 1761
+2026-03-16 21:56:57,018 - 
+--- Baseline Model Performance ---
+2026-03-16 21:56:57,024 - 
+Climatology Model (Monthly Average):
+2026-03-16 21:56:57,025 -   RMSE: 0.00072
+2026-03-16 21:56:57,025 -   MAE: 0.00062
+2026-03-16 21:56:57,025 -   R2: -0.93885
+2026-03-16 21:56:57,026 -   Temporal Correlation: 0.66513
+2026-03-16 21:56:57,028 - 
+Random Noise Baseline:
+2026-03-16 21:56:57,029 -   RMSE: 0.00072
+2026-03-16 21:56:57,029 -   MAE: 0.00058
+2026-03-16 21:56:57,029 -   R2: -0.94304
+2026-03-16 21:56:57,030 -   Temporal Correlation: 0.02077
+2026-03-16 21:56:57,030 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-16 21:56:57,031 - 
+--- Training XGBRegressor ---
+2026-03-16 22:00:28,397 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.6, 'learning_rate': 0.013116693046152515, 'max_depth': 3, 'n_estimators': 500, 'reg_alpha': 1e-06, 'reg_lambda': 0.00022791167810005638, 'subsample': 0.8952244907126405})
+2026-03-16 22:00:28,398 - Best cross-validation RMSE for XGBRegressor: 0.0005
+2026-03-16 22:00:28,404 - -- Initial Scores --
+2026-03-16 22:00:28,404 - RMSE: 0.00036, MAE: 0.00031, R2: 0.50539
+2026-03-16 22:00:28,406 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-16 22:00:28,406 - Feature Importance from Shap
+2026-03-16 22:00:29,247 -              mean_abs_shap
+time_step         0.000475
+sin_day           0.000187
+year              0.000106
+LAI_lag14         0.000100
+cos_day           0.000083
+LAI_lag7          0.000053
+stl1_lag7         0.000037
+stl1_lag14        0.000036
+swvl1_lag14       0.000024
+LAI               0.000017
+swvl1             0.000016
+stl1              0.000015
+swvl1_lag7        0.000012
+tp                0.000012
+tp_lag14          0.000003
+tp_lag7           0.000001
+2026-03-16 22:00:29,250 - Initial predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2891016/gpi_2891016_initial_predictions.pkl
+2026-03-16 22:00:30,025 - Starting expanding window forecast for 1761 points...
+2026-03-16 22:00:48,006 - -- 6% done
+2026-03-16 22:01:03,737 - -- 11% done
+2026-03-16 22:01:22,589 - -- 17% done
+2026-03-16 22:01:41,795 - -- 23% done
+2026-03-16 22:01:58,411 - -- 28% done
+2026-03-16 22:02:17,904 - -- 34% done
+2026-03-16 22:02:37,552 - -- 40% done
+2026-03-16 22:02:57,057 - -- 45% done
+2026-03-16 22:03:16,775 - -- 51% done
+2026-03-16 22:03:36,657 - -- 57% done
+2026-03-16 22:03:56,543 - -- 62% done
+2026-03-16 22:04:16,452 - -- 68% done
+2026-03-16 22:04:36,398 - -- 74% done
+2026-03-16 22:04:56,482 - -- 80% done
+2026-03-16 22:05:16,539 - -- 85% done
+2026-03-16 22:05:34,603 - -- 91% done
+2026-03-16 22:05:51,546 - -- 97% done
+2026-03-16 22:06:03,854 - -- 100% done
+2026-03-16 22:06:03,864 - Expanding window predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2891016/gpi_2891016_expanding_window_predictions.pkl
+2026-03-16 22:06:04,571 - 
+Final Performance:
+2026-03-16 22:06:04,572 - RMSE: 0.00020 | MAE: 0.00016 | R2: 0.84519
+2026-03-16 22:06:09,555 - gpi: 2866040, lat: -15.346562385559082, lon: 126.794921875
+2026-03-16 22:06:09,586 - Training data size: 7775
+2026-03-16 22:06:09,587 - Testing data size: 1944
+2026-03-16 22:06:09,591 - 
+--- Baseline Model Performance ---
+2026-03-16 22:06:09,597 - 
+Climatology Model (Monthly Average):
+2026-03-16 22:06:09,598 -   RMSE: 0.00054
+2026-03-16 22:06:09,598 -   MAE: 0.00038
+2026-03-16 22:06:09,599 -   R2: 0.83165
+2026-03-16 22:06:09,599 -   Temporal Correlation: 0.92292
+2026-03-16 22:06:09,602 - 
+Random Noise Baseline:
+2026-03-16 22:06:09,602 -   RMSE: 0.00183
+2026-03-16 22:06:09,602 -   MAE: 0.00142
+2026-03-16 22:06:09,603 -   R2: -0.92303
+2026-03-16 22:06:09,603 -   Temporal Correlation: 0.02881
+2026-03-16 22:06:09,604 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-16 22:06:09,604 - 
+--- Training XGBRegressor ---
+2026-03-16 22:09:48,005 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.6, 'learning_rate': 0.028702756919994354, 'max_depth': 3, 'n_estimators': 154, 'reg_alpha': 5.904770732311845e-06, 'reg_lambda': 3.6826795431600667e-06, 'subsample': 0.6772441436858628})
+2026-03-16 22:09:48,005 - Best cross-validation RMSE for XGBRegressor: 0.0008
+2026-03-16 22:09:48,009 - -- Initial Scores --
+2026-03-16 22:09:48,010 - RMSE: 0.00048, MAE: 0.00037, R2: 0.86615
+2026-03-16 22:09:48,012 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-16 22:09:48,012 - Feature Importance from Shap
+2026-03-16 22:09:48,734 -              mean_abs_shap
+sin_day           0.000381
+LAI_lag14         0.000147
+LAI_lag7          0.000136
+LAI               0.000134
+swvl1             0.000088
+swvl1_lag14       0.000076
+time_step         0.000075
+swvl1_lag7        0.000065
+stl1              0.000064
+stl1_lag14        0.000061
+stl1_lag7         0.000049
+cos_day           0.000032
+year              0.000019
+tp                0.000007
+tp_lag7           0.000002
+tp_lag14          0.000002
+2026-03-16 22:09:48,737 - Initial predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2866040/gpi_2866040_initial_predictions.pkl
+2026-03-16 22:09:49,429 - Starting expanding window forecast for 1944 points...
+2026-03-16 22:09:56,759 - -- 5% done
+2026-03-16 22:10:04,202 - -- 10% done
+2026-03-16 22:10:11,593 - -- 15% done
+2026-03-16 22:10:19,019 - -- 21% done
+2026-03-16 22:10:26,316 - -- 26% done
+2026-03-16 22:10:33,353 - -- 31% done
+2026-03-16 22:10:40,543 - -- 36% done
+2026-03-16 22:10:47,448 - -- 41% done
+2026-03-16 22:10:53,907 - -- 46% done
+2026-03-16 22:11:00,418 - -- 51% done
+2026-03-16 22:11:07,034 - -- 57% done
+2026-03-16 22:11:13,594 - -- 62% done
+2026-03-16 22:11:20,146 - -- 67% done
+2026-03-16 22:11:27,315 - -- 72% done
+2026-03-16 22:11:35,045 - -- 77% done
+2026-03-16 22:11:42,780 - -- 82% done
+2026-03-16 22:11:50,574 - -- 87% done
+2026-03-16 22:11:58,399 - -- 93% done
+2026-03-16 22:12:06,219 - -- 98% done
+2026-03-16 22:12:09,774 - -- 100% done
+2026-03-16 22:12:09,785 - Expanding window predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2866040/gpi_2866040_expanding_window_predictions.pkl
+2026-03-16 22:12:10,610 - 
+Final Performance:
+2026-03-16 22:12:10,610 - RMSE: 0.00037 | MAE: 0.00027 | R2: 0.92060
+2026-03-16 22:12:15,146 - gpi: 2831296, lat: -16.608083724975586, lon: 136.549072265625
+2026-03-16 22:12:15,158 - Training data size: 7274
+2026-03-16 22:12:15,158 - Testing data size: 1819
+2026-03-16 22:12:15,162 - 
+--- Baseline Model Performance ---
+2026-03-16 22:12:15,168 - 
+Climatology Model (Monthly Average):
+2026-03-16 22:12:15,168 -   RMSE: 0.00056
+2026-03-16 22:12:15,169 -   MAE: 0.00044
+2026-03-16 22:12:15,169 -   R2: 0.41131
+2026-03-16 22:12:15,169 -   Temporal Correlation: 0.67064
+2026-03-16 22:12:15,171 - 
+Random Noise Baseline:
+2026-03-16 22:12:15,172 -   RMSE: 0.00101
+2026-03-16 22:12:15,172 -   MAE: 0.00080
+2026-03-16 22:12:15,172 -   R2: -0.90108
+2026-03-16 22:12:15,173 -   Temporal Correlation: 0.04194
+2026-03-16 22:12:15,173 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-16 22:12:15,174 - 
+--- Training XGBRegressor ---
+2026-03-16 22:16:05,000 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.6, 'learning_rate': 0.01655566102328073, 'max_depth': 3, 'n_estimators': 454, 'reg_alpha': 1.660602148780199e-05, 'reg_lambda': 1e-06, 'subsample': 0.9228629091457896})
+2026-03-16 22:16:05,005 - Best cross-validation RMSE for XGBRegressor: 0.0004
+2026-03-16 22:16:05,011 - -- Initial Scores --
+2026-03-16 22:16:05,011 - RMSE: 0.00064, MAE: 0.00052, R2: 0.23441
+2026-03-16 22:16:05,012 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-16 22:16:05,012 - Feature Importance from Shap
+2026-03-16 22:16:05,943 -              mean_abs_shap
+time_step         0.000168
+year              0.000105
+LAI               0.000065
+sin_day           0.000064
+LAI_lag14         0.000045
+LAI_lag7          0.000039
+swvl1             0.000035
+swvl1_lag7        0.000035
+swvl1_lag14       0.000033
+cos_day           0.000023
+stl1              0.000018
+stl1_lag7         0.000009
+tp_lag7           0.000006
+tp_lag14          0.000006
+stl1_lag14        0.000004
+tp                0.000002
+2026-03-16 22:16:05,946 - Initial predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2831296/gpi_2831296_initial_predictions.pkl
+2026-03-16 22:16:06,667 - Starting expanding window forecast for 1819 points...
+2026-03-16 22:16:24,152 - -- 5% done
+2026-03-16 22:16:41,469 - -- 11% done
+2026-03-16 22:16:58,991 - -- 16% done
+2026-03-16 22:17:16,338 - -- 22% done
+2026-03-16 22:17:33,909 - -- 27% done
+2026-03-16 22:17:51,624 - -- 33% done
+2026-03-16 22:18:09,445 - -- 38% done
+2026-03-16 22:18:27,258 - -- 44% done
+2026-03-16 22:18:45,149 - -- 49% done
+2026-03-16 22:19:02,983 - -- 55% done
+2026-03-16 22:19:20,880 - -- 60% done
+2026-03-16 22:19:38,732 - -- 66% done
+2026-03-16 22:19:56,558 - -- 71% done
+2026-03-16 22:20:14,674 - -- 77% done
+2026-03-16 22:20:32,777 - -- 82% done
+2026-03-16 22:20:51,049 - -- 88% done
+2026-03-16 22:21:09,653 - -- 93% done
+2026-03-16 22:21:27,988 - -- 99% done
+2026-03-16 22:21:31,674 - -- 100% done
+2026-03-16 22:21:31,916 - Expanding window predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2831296/gpi_2831296_expanding_window_predictions.pkl
+2026-03-16 22:21:32,659 - 
+Final Performance:
+2026-03-16 22:21:32,659 - RMSE: 0.00024 | MAE: 0.00019 | R2: 0.89136
+2026-03-16 22:21:37,075 - gpi: 2912599, lat: -13.667365074157715, lon: 142.8085174560547
+2026-03-16 22:21:37,087 - Training data size: 7480
+2026-03-16 22:21:37,088 - Testing data size: 1871
+2026-03-16 22:21:37,092 - 
+--- Baseline Model Performance ---
+2026-03-16 22:21:37,098 - 
+Climatology Model (Monthly Average):
+2026-03-16 22:21:37,098 -   RMSE: 0.00032
+2026-03-16 22:21:37,099 -   MAE: 0.00024
+2026-03-16 22:21:37,099 -   R2: 0.81453
+2026-03-16 22:21:37,099 -   Temporal Correlation: 0.90673
+2026-03-16 22:21:37,101 - 
+Random Noise Baseline:
+2026-03-16 22:21:37,102 -   RMSE: 0.00102
+2026-03-16 22:21:37,102 -   MAE: 0.00082
+2026-03-16 22:21:37,103 -   R2: -0.93562
+2026-03-16 22:21:37,103 -   Temporal Correlation: 0.02155
+2026-03-16 22:21:37,104 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-16 22:21:37,104 - 
+--- Training XGBRegressor ---
+2026-03-16 22:25:00,769 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.6014521229018973, 'learning_rate': 0.16144853360713746, 'max_depth': 8, 'n_estimators': 165, 'reg_alpha': 0.011236999294535673, 'reg_lambda': 8.375368839458797e-05, 'subsample': 0.7251357224938513})
+2026-03-16 22:25:00,772 - Best cross-validation RMSE for XGBRegressor: 0.0004
+2026-03-16 22:25:00,789 - -- Initial Scores --
+2026-03-16 22:25:00,790 - RMSE: 0.00038, MAE: 0.00030, R2: 0.73004
+2026-03-16 22:25:00,791 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-16 22:25:00,791 - Feature Importance from Shap
+2026-03-16 22:25:01,472 -              mean_abs_shap
+LAI_lag14         0.000201
+sin_day           0.000184
+time_step         0.000104
+LAI               0.000064
+swvl1_lag14       0.000064
+cos_day           0.000059
+LAI_lag7          0.000058
+stl1              0.000037
+swvl1_lag7        0.000027
+year              0.000014
+stl1_lag7         0.000013
+swvl1             0.000013
+stl1_lag14        0.000009
+tp_lag14          0.000002
+tp_lag7           0.000000
+tp                0.000000
+2026-03-16 22:25:01,475 - Initial predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2912599/gpi_2912599_initial_predictions.pkl
+2026-03-16 22:25:02,277 - Starting expanding window forecast for 1871 points...
+2026-03-16 22:25:08,177 - -- 5% done
+2026-03-16 22:25:14,189 - -- 11% done
+2026-03-16 22:25:20,197 - -- 16% done
+2026-03-16 22:25:26,273 - -- 21% done
+2026-03-16 22:25:32,340 - -- 27% done
+2026-03-16 22:25:38,395 - -- 32% done
+2026-03-16 22:25:44,510 - -- 37% done
+2026-03-16 22:25:50,738 - -- 43% done
+2026-03-16 22:25:57,007 - -- 48% done
+2026-03-16 22:26:03,288 - -- 53% done
+2026-03-16 22:26:09,599 - -- 59% done
+2026-03-16 22:26:15,938 - -- 64% done
+2026-03-16 22:26:22,310 - -- 69% done
+2026-03-16 22:26:28,752 - -- 75% done
+2026-03-16 22:26:34,610 - -- 80% done
+2026-03-16 22:26:40,934 - -- 86% done
+2026-03-16 22:26:47,593 - -- 91% done
+2026-03-16 22:26:54,289 - -- 96% done
+2026-03-16 22:26:59,080 - -- 100% done
+2026-03-16 22:26:59,089 - Expanding window predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2912599/gpi_2912599_expanding_window_predictions.pkl
+2026-03-16 22:26:59,790 - 
+Final Performance:
+2026-03-16 22:26:59,791 - RMSE: 0.00024 | MAE: 0.00018 | R2: 0.89328
+2026-03-16 22:27:04,620 - gpi: 2808396, lat: -17.443904876708984, lon: 144.3458251953125
+2026-03-16 22:27:04,642 - Training data size: 8236
+2026-03-16 22:27:04,643 - Testing data size: 2059
+2026-03-16 22:27:04,647 - 
+--- Baseline Model Performance ---
+2026-03-16 22:27:04,653 - 
+Climatology Model (Monthly Average):
+2026-03-16 22:27:04,653 -   RMSE: 0.00072
+2026-03-16 22:27:04,654 -   MAE: 0.00059
+2026-03-16 22:27:04,654 -   R2: -1.78641
+2026-03-16 22:27:04,655 -   Temporal Correlation: 0.25575
+2026-03-16 22:27:04,657 - 
+Random Noise Baseline:
+2026-03-16 22:27:04,657 -   RMSE: 0.00061
+2026-03-16 22:27:04,658 -   MAE: 0.00049
+2026-03-16 22:27:04,658 -   R2: -0.96902
+2026-03-16 22:27:04,658 -   Temporal Correlation: 0.00538
+2026-03-16 22:27:04,659 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-16 22:27:04,659 - 
+--- Training XGBRegressor ---
+2026-03-16 22:30:56,958 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.9949835440067334, 'learning_rate': 0.029429788384392398, 'max_depth': 3, 'n_estimators': 476, 'reg_alpha': 0.016121618899022826, 'reg_lambda': 1.155432609192227, 'subsample': 0.6437098718404912})
+2026-03-16 22:30:56,963 - Best cross-validation RMSE for XGBRegressor: 0.0004
+2026-03-16 22:30:56,967 - -- Initial Scores --
+2026-03-16 22:30:56,968 - RMSE: 0.00048, MAE: 0.00036, R2: -0.22876
+2026-03-16 22:30:56,969 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-16 22:30:56,969 - Feature Importance from Shap
+2026-03-16 22:30:57,753 -              mean_abs_shap
+time_step     2.674933e-04
+swvl1         4.604401e-05
+sin_day       4.291636e-05
+cos_day       3.861002e-05
+LAI           2.676178e-05
+LAI_lag14     2.411371e-05
+swvl1_lag7    1.786414e-05
+year          1.637603e-05
+stl1          1.430488e-05
+LAI_lag7      1.397282e-05
+stl1_lag7     6.924403e-06
+stl1_lag14    4.624037e-06
+swvl1_lag14   3.794179e-06
+tp            1.711162e-06
+tp_lag7       6.332261e-07
+tp_lag14      5.299161e-07
+2026-03-16 22:30:57,756 - Initial predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2808396/gpi_2808396_initial_predictions.pkl
+2026-03-16 22:30:58,439 - Starting expanding window forecast for 2059 points...
+2026-03-16 22:31:14,348 - -- 5% done
+2026-03-16 22:31:28,568 - -- 10% done
+2026-03-16 22:31:44,424 - -- 15% done
+2026-03-16 22:32:00,420 - -- 19% done
+2026-03-16 22:32:16,099 - -- 24% done
+2026-03-16 22:32:31,086 - -- 29% done
+2026-03-16 22:32:47,055 - -- 34% done
+2026-03-16 22:33:03,713 - -- 39% done
+2026-03-16 22:33:20,319 - -- 44% done
+2026-03-16 22:33:37,193 - -- 49% done
+2026-03-16 22:33:54,027 - -- 53% done
+2026-03-16 22:34:10,857 - -- 58% done
+2026-03-16 22:34:27,805 - -- 63% done
+2026-03-16 22:34:44,939 - -- 68% done
+2026-03-16 22:35:02,246 - -- 73% done
+2026-03-16 22:35:19,551 - -- 78% done
+2026-03-16 22:35:37,030 - -- 83% done
+2026-03-16 22:35:52,829 - -- 87% done
+2026-03-16 22:36:10,714 - -- 92% done
+2026-03-16 22:36:28,765 - -- 97% done
+2026-03-16 22:36:39,587 - -- 100% done
+2026-03-16 22:36:39,597 - Expanding window predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2808396/gpi_2808396_expanding_window_predictions.pkl
+2026-03-16 22:36:40,411 - 
+Final Performance:
+2026-03-16 22:36:40,412 - RMSE: 0.00030 | MAE: 0.00023 | R2: 0.51987
+2026-03-16 22:36:45,263 - gpi: 2718799, lat: -20.75188446044922, lon: 147.48141479492188
+2026-03-16 22:36:45,285 - Training data size: 8236
+2026-03-16 22:36:45,285 - Testing data size: 2060
+2026-03-16 22:36:45,289 - 
+--- Baseline Model Performance ---
+2026-03-16 22:36:45,296 - 
+Climatology Model (Monthly Average):
+2026-03-16 22:36:45,296 -   RMSE: 0.00066
+2026-03-16 22:36:45,297 -   MAE: 0.00058
+2026-03-16 22:36:45,298 -   R2: -2.78886
+2026-03-16 22:36:45,298 -   Temporal Correlation: 0.15589
+2026-03-16 22:36:45,300 - 
+Random Noise Baseline:
+2026-03-16 22:36:45,301 -   RMSE: 0.00048
+2026-03-16 22:36:45,301 -   MAE: 0.00039
+2026-03-16 22:36:45,302 -   R2: -0.97408
+2026-03-16 22:36:45,303 -   Temporal Correlation: 0.00259
+2026-03-16 22:36:45,303 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-16 22:36:45,304 - 
+--- Training XGBRegressor ---
+2026-03-16 22:40:25,259 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.9939421822169736, 'learning_rate': 0.052054692520514326, 'max_depth': 10, 'n_estimators': 115, 'reg_alpha': 7.663642597747926e-05, 'reg_lambda': 1.820089286522892e-05, 'subsample': 0.7255032399000482})
+2026-03-16 22:40:25,264 - Best cross-validation RMSE for XGBRegressor: 0.0005
+2026-03-16 22:40:25,269 - -- Initial Scores --
+2026-03-16 22:40:25,270 - RMSE: 0.00061, MAE: 0.00051, R2: -2.22320
+2026-03-16 22:40:25,270 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-16 22:40:25,271 - Feature Importance from Shap
+2026-03-16 22:40:26,316 -              mean_abs_shap
+swvl1         1.156703e-04
+time_step     9.933971e-05
+sin_day       7.480522e-05
+swvl1_lag7    3.978071e-05
+LAI_lag7      2.891128e-05
+cos_day       2.366063e-05
+LAI_lag14     2.139789e-05
+swvl1_lag14   1.699766e-05
+LAI           1.681867e-05
+year          1.038271e-05
+tp_lag14      8.501984e-06
+stl1          3.140399e-06
+stl1_lag14    2.553928e-06
+stl1_lag7     1.970758e-06
+tp            2.896462e-07
+tp_lag7       1.652158e-07
+2026-03-16 22:40:26,320 - Initial predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2718799/gpi_2718799_initial_predictions.pkl
+2026-03-16 22:40:27,029 - Starting expanding window forecast for 2060 points...
+2026-03-16 22:40:42,763 - -- 5% done
+2026-03-16 22:40:58,443 - -- 10% done
+2026-03-16 22:41:13,883 - -- 15% done
+2026-03-16 22:41:29,330 - -- 19% done
+2026-03-16 22:41:45,421 - -- 24% done
+2026-03-16 22:42:01,525 - -- 29% done
+2026-03-16 22:42:17,899 - -- 34% done
+2026-03-16 22:42:34,286 - -- 39% done
+2026-03-16 22:42:51,109 - -- 44% done
+2026-03-16 22:43:07,877 - -- 49% done
+2026-03-16 22:43:24,701 - -- 53% done
+2026-03-16 22:43:41,605 - -- 58% done
+2026-03-16 22:43:57,105 - -- 63% done
+2026-03-16 22:44:14,273 - -- 68% done
+2026-03-16 22:44:31,744 - -- 73% done
+2026-03-16 22:44:49,151 - -- 78% done
+2026-03-16 22:45:06,836 - -- 83% done
+2026-03-16 22:45:24,630 - -- 87% done
+2026-03-16 22:45:42,203 - -- 92% done
+2026-03-16 22:45:59,783 - -- 97% done
+2026-03-16 22:46:10,479 - -- 100% done
+2026-03-16 22:46:10,492 - Expanding window predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2718799/gpi_2718799_expanding_window_predictions.pkl
+2026-03-16 22:46:11,188 - 
+Final Performance:
+2026-03-16 22:46:11,189 - RMSE: 0.00020 | MAE: 0.00016 | R2: 0.65776
+2026-03-16 22:46:15,009 - gpi: 2606988, lat: -24.98216438293457, lon: 148.08761596679688
+2026-03-16 22:46:15,028 - Training data size: 8601
+2026-03-16 22:46:15,029 - Testing data size: 2151
+2026-03-16 22:46:15,033 - 
+--- Baseline Model Performance ---
+2026-03-16 22:46:15,039 - 
+Climatology Model (Monthly Average):
+2026-03-16 22:46:15,039 -   RMSE: 0.00044
+2026-03-16 22:46:15,040 -   MAE: 0.00036
+2026-03-16 22:46:15,040 -   R2: 0.03237
+2026-03-16 22:46:15,041 -   Temporal Correlation: 0.56668
+2026-03-16 22:46:15,042 - 
+Random Noise Baseline:
+2026-03-16 22:46:15,043 -   RMSE: 0.00063
+2026-03-16 22:46:15,043 -   MAE: 0.00050
+2026-03-16 22:46:15,044 -   R2: -0.98601
+2026-03-16 22:46:15,044 -   Temporal Correlation: -0.00561
+2026-03-16 22:46:15,044 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-16 22:46:15,044 - 
+--- Training XGBRegressor ---
+2026-03-16 22:49:54,857 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.6, 'learning_rate': 0.05501375626073365, 'max_depth': 3, 'n_estimators': 91, 'reg_alpha': 0.0012990631739757356, 'reg_lambda': 1e-06, 'subsample': 0.8343493482731669})
+2026-03-16 22:49:54,861 - Best cross-validation RMSE for XGBRegressor: 0.0004
+2026-03-16 22:49:54,865 - -- Initial Scores --
+2026-03-16 22:49:54,865 - RMSE: 0.00043, MAE: 0.00036, R2: 0.07700
+2026-03-16 22:49:54,866 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-16 22:49:54,866 - Feature Importance from Shap
+2026-03-16 22:49:55,679 -              mean_abs_shap
+swvl1         7.980946e-05
+LAI_lag14     4.990931e-05
+sin_day       4.540941e-05
+year          4.395828e-05
+LAI_lag7      4.302543e-05
+time_step     3.533842e-05
+swvl1_lag7    3.034204e-05
+LAI           2.616354e-05
+cos_day       2.089623e-05
+swvl1_lag14   1.054852e-05
+stl1          4.413701e-06
+stl1_lag7     4.223541e-06
+stl1_lag14    2.734628e-06
+tp            2.015254e-06
+tp_lag14      5.618584e-07
+tp_lag7       3.317779e-07
+2026-03-16 22:49:55,682 - Initial predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2606988/gpi_2606988_initial_predictions.pkl
+2026-03-16 22:49:56,410 - Starting expanding window forecast for 2151 points...
+2026-03-16 22:50:01,282 - -- 5% done
+2026-03-16 22:50:06,184 - -- 9% done
+2026-03-16 22:50:11,045 - -- 14% done
+2026-03-16 22:50:15,366 - -- 19% done
+2026-03-16 22:50:20,101 - -- 23% done
+2026-03-16 22:50:25,019 - -- 28% done
+2026-03-16 22:50:29,937 - -- 33% done
+2026-03-16 22:50:34,925 - -- 37% done
+2026-03-16 22:50:39,896 - -- 42% done
+2026-03-16 22:50:44,880 - -- 46% done
+2026-03-16 22:50:49,876 - -- 51% done
+2026-03-16 22:50:54,926 - -- 56% done
+2026-03-16 22:50:59,930 - -- 60% done
+2026-03-16 22:51:04,965 - -- 65% done
+2026-03-16 22:51:10,019 - -- 70% done
+2026-03-16 22:51:15,029 - -- 74% done
+2026-03-16 22:51:20,055 - -- 79% done
+2026-03-16 22:51:24,898 - -- 84% done
+2026-03-16 22:51:29,938 - -- 88% done
+2026-03-16 22:51:35,040 - -- 93% done
+2026-03-16 22:51:40,155 - -- 98% done
+2026-03-16 22:51:42,886 - -- 100% done
+2026-03-16 22:51:42,896 - Expanding window predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2606988/gpi_2606988_expanding_window_predictions.pkl
+2026-03-16 22:51:43,622 - 
+Final Performance:
+2026-03-16 22:51:43,622 - RMSE: 0.00024 | MAE: 0.00020 | R2: 0.69955
+2026-03-16 22:51:47,598 - gpi: 2618866, lat: -24.526512145996094, lon: 150.86622619628906
+2026-03-16 22:51:47,611 - Training data size: 8644
+2026-03-16 22:51:47,611 - Testing data size: 2161
+2026-03-16 22:51:47,615 - 
+--- Baseline Model Performance ---
+2026-03-16 22:51:47,622 - 
+Climatology Model (Monthly Average):
+2026-03-16 22:51:47,622 -   RMSE: 0.00052
+2026-03-16 22:51:47,622 -   MAE: 0.00042
+2026-03-16 22:51:47,623 -   R2: -0.63872
+2026-03-16 22:51:47,623 -   Temporal Correlation: 0.58880
+2026-03-16 22:51:47,625 - 
+Random Noise Baseline:
+2026-03-16 22:51:47,626 -   RMSE: 0.00056
+2026-03-16 22:51:47,626 -   MAE: 0.00045
+2026-03-16 22:51:47,626 -   R2: -0.94562
+2026-03-16 22:51:47,627 -   Temporal Correlation: 0.01450
+2026-03-16 22:51:47,627 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-16 22:51:47,628 - 
+--- Training XGBRegressor ---
+2026-03-16 22:55:21,814 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.8113129019599824, 'learning_rate': 0.29999999999999993, 'max_depth': 3, 'n_estimators': 500, 'reg_alpha': 0.0538196656308372, 'reg_lambda': 7.053199712748101, 'subsample': 0.7822247929867711})
+2026-03-16 22:55:21,819 - Best cross-validation RMSE for XGBRegressor: 0.0005
+2026-03-16 22:55:21,823 - -- Initial Scores --
+2026-03-16 22:55:21,823 - RMSE: 0.00035, MAE: 0.00028, R2: 0.26846
+2026-03-16 22:55:21,824 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-16 22:55:21,824 - Feature Importance from Shap
+2026-03-16 22:55:22,530 -              mean_abs_shap
+time_step         0.000280
+LAI_lag14         0.000111
+LAI_lag7          0.000083
+cos_day           0.000018
+sin_day           0.000014
+year              0.000011
+LAI               0.000010
+swvl1             0.000009
+swvl1_lag14       0.000006
+swvl1_lag7        0.000002
+stl1              0.000001
+stl1_lag14        0.000001
+tp_lag7           0.000000
+stl1_lag7         0.000000
+tp                0.000000
+tp_lag14          0.000000
+2026-03-16 22:55:22,533 - Initial predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2618866/gpi_2618866_initial_predictions.pkl
+2026-03-16 22:55:23,329 - Starting expanding window forecast for 2161 points...
+2026-03-16 22:55:33,933 - -- 5% done
+2026-03-16 22:55:44,498 - -- 9% done
+2026-03-16 22:55:55,303 - -- 14% done
+2026-03-16 22:56:06,088 - -- 19% done
+2026-03-16 22:56:16,808 - -- 23% done
+2026-03-16 22:56:27,554 - -- 28% done
+2026-03-16 22:56:38,501 - -- 32% done
+2026-03-16 22:56:49,698 - -- 37% done
+2026-03-16 22:57:00,695 - -- 42% done
+2026-03-16 22:57:11,909 - -- 46% done
+2026-03-16 22:57:23,035 - -- 51% done
+2026-03-16 22:57:34,229 - -- 56% done
+2026-03-16 22:57:45,439 - -- 60% done
+2026-03-16 22:57:56,637 - -- 65% done
+2026-03-16 22:58:07,866 - -- 69% done
+2026-03-16 22:58:18,415 - -- 74% done
+2026-03-16 22:58:28,743 - -- 79% done
+2026-03-16 22:58:39,079 - -- 83% done
+2026-03-16 22:58:49,413 - -- 88% done
+2026-03-16 22:58:59,626 - -- 93% done
+2026-03-16 22:59:09,931 - -- 97% done
+2026-03-16 22:59:16,354 - -- 100% done
+2026-03-16 22:59:16,365 - Expanding window predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2618866/gpi_2618866_expanding_window_predictions.pkl
+2026-03-16 22:59:17,069 - 
+Final Performance:
+2026-03-16 22:59:17,069 - RMSE: 0.00030 | MAE: 0.00024 | R2: 0.43773
+2026-03-16 22:59:21,633 - gpi: 2515328, lat: -28.55712127685547, lon: 149.7404327392578
+2026-03-16 22:59:21,656 - Training data size: 8872
+2026-03-16 22:59:21,657 - Testing data size: 2218
+2026-03-16 22:59:21,660 - 
+--- Baseline Model Performance ---
+2026-03-16 22:59:21,667 - 
+Climatology Model (Monthly Average):
+2026-03-16 22:59:21,668 -   RMSE: 0.00137
+2026-03-16 22:59:21,668 -   MAE: 0.00109
+2026-03-16 22:59:21,668 -   R2: -0.83330
+2026-03-16 22:59:21,669 -   Temporal Correlation: 0.49941
+2026-03-16 22:59:21,670 - 
+Random Noise Baseline:
+2026-03-16 22:59:21,671 -   RMSE: 0.00144
+2026-03-16 22:59:21,671 -   MAE: 0.00115
+2026-03-16 22:59:21,671 -   R2: -1.03943
+2026-03-16 22:59:21,672 -   Temporal Correlation: -0.03319
+2026-03-16 22:59:21,672 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-16 22:59:21,672 - 
+--- Training XGBRegressor ---
+2026-03-16 23:03:29,727 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.6, 'learning_rate': 0.05588274362854286, 'max_depth': 3, 'n_estimators': 435, 'reg_alpha': 0.05046618358929401, 'reg_lambda': 0.0004567345085345497, 'subsample': 0.6})
+2026-03-16 23:03:29,732 - Best cross-validation RMSE for XGBRegressor: 0.0010
+2026-03-16 23:03:29,736 - -- Initial Scores --
+2026-03-16 23:03:29,737 - RMSE: 0.00139, MAE: 0.00116, R2: -0.90921
+2026-03-16 23:03:29,738 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-16 23:03:29,738 - Feature Importance from Shap
+2026-03-16 23:03:30,615 -              mean_abs_shap
+time_step         0.001716
+sin_day           0.000528
+year              0.000233
+cos_day           0.000064
+LAI_lag14         0.000057
+LAI_lag7          0.000053
+LAI               0.000052
+stl1              0.000050
+stl1_lag7         0.000041
+swvl1             0.000038
+swvl1_lag7        0.000030
+stl1_lag14        0.000028
+swvl1_lag14       0.000013
+tp                0.000012
+tp_lag14          0.000008
+tp_lag7           0.000003
+2026-03-16 23:03:30,618 - Initial predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2515328/gpi_2515328_initial_predictions.pkl
+2026-03-16 23:03:31,326 - Starting expanding window forecast for 2218 points...
+2026-03-16 23:03:43,048 - -- 5% done
+2026-03-16 23:03:56,344 - -- 9% done
+2026-03-16 23:04:09,826 - -- 14% done
+2026-03-16 23:04:23,477 - -- 18% done
+2026-03-16 23:04:37,054 - -- 23% done
+2026-03-16 23:04:50,734 - -- 27% done
+2026-03-16 23:05:04,422 - -- 32% done
+2026-03-16 23:05:18,309 - -- 36% done
+2026-03-16 23:05:32,284 - -- 41% done
+2026-03-16 23:05:46,703 - -- 45% done
+2026-03-16 23:06:00,752 - -- 50% done
+2026-03-16 23:06:14,892 - -- 54% done
+2026-03-16 23:06:28,969 - -- 59% done
+2026-03-16 23:06:43,034 - -- 63% done
+2026-03-16 23:06:57,141 - -- 68% done
+2026-03-16 23:07:11,495 - -- 72% done
+2026-03-16 23:07:24,365 - -- 77% done
+2026-03-16 23:07:38,642 - -- 81% done
+2026-03-16 23:07:53,257 - -- 86% done
+2026-03-16 23:08:07,862 - -- 90% done
+2026-03-16 23:08:22,587 - -- 95% done
+2026-03-16 23:08:36,117 - -- 99% done
+2026-03-16 23:08:38,924 - -- 100% done
+2026-03-16 23:08:38,935 - Expanding window predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2515328/gpi_2515328_expanding_window_predictions.pkl
+2026-03-16 23:08:39,639 - 
+Final Performance:
+2026-03-16 23:08:39,640 - RMSE: 0.00046 | MAE: 0.00037 | R2: 0.78973
+2026-03-16 23:08:43,718 - gpi: 2395765, lat: -33.40806579589844, lon: 150.53355407714844
+2026-03-16 23:08:43,731 - Training data size: 9404
+2026-03-16 23:08:43,732 - Testing data size: 2351
+2026-03-16 23:08:43,735 - 
+--- Baseline Model Performance ---
+2026-03-16 23:08:43,742 - 
+Climatology Model (Monthly Average):
+2026-03-16 23:08:43,743 -   RMSE: 0.00114
+2026-03-16 23:08:43,743 -   MAE: 0.00109
+2026-03-16 23:08:43,744 -   R2: -10.88185
+2026-03-16 23:08:43,744 -   Temporal Correlation: 0.20145
+2026-03-16 23:08:43,746 - 
+Random Noise Baseline:
+2026-03-16 23:08:43,746 -   RMSE: 0.00047
+2026-03-16 23:08:43,747 -   MAE: 0.00038
+2026-03-16 23:08:43,747 -   R2: -1.02103
+2026-03-16 23:08:43,747 -   Temporal Correlation: -0.02384
+2026-03-16 23:08:43,748 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-16 23:08:43,748 - 
+--- Training XGBRegressor ---
+2026-03-16 23:12:07,719 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.9714100689597133, 'learning_rate': 0.11055084927117684, 'max_depth': 3, 'n_estimators': 342, 'reg_alpha': 0.049023205543775594, 'reg_lambda': 2.556902448422794e-06, 'subsample': 0.7460109635662351})
+2026-03-16 23:12:07,724 - Best cross-validation RMSE for XGBRegressor: 0.0007
+2026-03-16 23:12:07,728 - -- Initial Scores --
+2026-03-16 23:12:07,728 - RMSE: 0.00066, MAE: 0.00059, R2: -2.98298
+2026-03-16 23:12:07,729 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-16 23:12:07,730 - Feature Importance from Shap
+2026-03-16 23:12:08,483 -              mean_abs_shap
+time_step     1.465327e-03
+year          1.958045e-04
+sin_day       5.178174e-05
+swvl1         4.206006e-05
+LAI_lag14     2.713784e-05
+LAI           2.513124e-05
+swvl1_lag7    2.505958e-05
+cos_day       1.782598e-05
+LAI_lag7      1.108829e-05
+swvl1_lag14   9.919250e-06
+stl1          2.915633e-06
+stl1_lag7     2.269469e-06
+tp_lag14      1.408460e-06
+tp            5.643077e-07
+tp_lag7       0.000000e+00
+stl1_lag14    0.000000e+00
+2026-03-16 23:12:08,486 - Initial predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2395765/gpi_2395765_initial_predictions.pkl
+2026-03-16 23:12:09,183 - Starting expanding window forecast for 2351 points...
+2026-03-16 23:12:18,998 - -- 4% done
+2026-03-16 23:12:28,898 - -- 9% done
+2026-03-16 23:12:38,794 - -- 13% done
+2026-03-16 23:12:48,764 - -- 17% done
+2026-03-16 23:12:58,695 - -- 21% done
+2026-03-16 23:13:08,696 - -- 26% done
+2026-03-16 23:13:18,773 - -- 30% done
+2026-03-16 23:13:28,907 - -- 34% done
+2026-03-16 23:13:38,242 - -- 38% done
+2026-03-16 23:13:47,863 - -- 43% done
+2026-03-16 23:13:58,223 - -- 47% done
+2026-03-16 23:14:08,643 - -- 51% done
+2026-03-16 23:14:19,170 - -- 55% done
+2026-03-16 23:14:29,614 - -- 60% done
+2026-03-16 23:14:40,042 - -- 64% done
+2026-03-16 23:14:50,650 - -- 68% done
+2026-03-16 23:15:01,345 - -- 72% done
+2026-03-16 23:15:12,047 - -- 77% done
+2026-03-16 23:15:22,839 - -- 81% done
+2026-03-16 23:15:33,602 - -- 85% done
+2026-03-16 23:15:44,426 - -- 89% done
+2026-03-16 23:15:55,181 - -- 94% done
+2026-03-16 23:16:06,090 - -- 98% done
+2026-03-16 23:16:11,829 - -- 100% done
+2026-03-16 23:16:11,840 - Expanding window predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2395765/gpi_2395765_expanding_window_predictions.pkl
+2026-03-16 23:16:12,541 - 
+Final Performance:
+2026-03-16 23:16:12,541 - RMSE: 0.00021 | MAE: 0.00016 | R2: 0.59728
+2026-03-16 23:16:16,702 - gpi: 2303173, lat: -37.35226058959961, lon: 149.42247009277344
+2026-03-16 23:16:16,717 - Training data size: 9843
+2026-03-16 23:16:16,717 - Testing data size: 2461
+2026-03-16 23:16:16,721 - 
+--- Baseline Model Performance ---
+2026-03-16 23:16:16,728 - 
+Climatology Model (Monthly Average):
+2026-03-16 23:16:16,728 -   RMSE: 0.00139
+2026-03-16 23:16:16,729 -   MAE: 0.00127
+2026-03-16 23:16:16,729 -   R2: -5.39330
+2026-03-16 23:16:16,730 -   Temporal Correlation: 0.23200
+2026-03-16 23:16:16,731 - 
+Random Noise Baseline:
+2026-03-16 23:16:16,732 -   RMSE: 0.00076
+2026-03-16 23:16:16,732 -   MAE: 0.00062
+2026-03-16 23:16:16,733 -   R2: -0.94326
+2026-03-16 23:16:16,733 -   Temporal Correlation: 0.01207
+2026-03-16 23:16:16,733 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-16 23:16:16,734 - 
+--- Training XGBRegressor ---
+2026-03-16 23:19:52,106 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.7751889866209076, 'learning_rate': 0.2942509487004122, 'max_depth': 10, 'n_estimators': 402, 'reg_alpha': 0.03157893003409121, 'reg_lambda': 0.008249975402919666, 'subsample': 0.6042922689255222})
+2026-03-16 23:19:52,111 - Best cross-validation RMSE for XGBRegressor: 0.0008
+2026-03-16 23:19:52,115 - -- Initial Scores --
+2026-03-16 23:19:52,115 - RMSE: 0.00083, MAE: 0.00070, R2: -1.31881
+2026-03-16 23:19:52,116 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-16 23:19:52,116 - Feature Importance from Shap
+2026-03-16 23:19:52,994 -              mean_abs_shap
+time_step     2.172939e-03
+LAI_lag7      2.806639e-04
+year          1.435754e-04
+LAI           1.361007e-04
+LAI_lag14     1.255155e-04
+cos_day       7.583992e-05
+sin_day       7.349438e-05
+swvl1         1.138126e-05
+stl1          1.095068e-05
+stl1_lag14    1.073917e-05
+swvl1_lag7    8.743980e-06
+stl1_lag7     6.168745e-06
+swvl1_lag14   4.859883e-06
+tp_lag14      6.126959e-07
+tp_lag7       0.000000e+00
+tp            0.000000e+00
+2026-03-16 23:19:52,997 - Initial predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2303173/gpi_2303173_initial_predictions.pkl
+2026-03-16 23:19:53,695 - Starting expanding window forecast for 2461 points...
+2026-03-16 23:20:04,223 - -- 4% done
+2026-03-16 23:20:14,881 - -- 8% done
+2026-03-16 23:20:25,456 - -- 12% done
+2026-03-16 23:20:36,032 - -- 16% done
+2026-03-16 23:20:46,827 - -- 20% done
+2026-03-16 23:20:56,879 - -- 24% done
+2026-03-16 23:21:07,543 - -- 28% done
+2026-03-16 23:21:18,532 - -- 33% done
+2026-03-16 23:21:29,456 - -- 37% done
+2026-03-16 23:21:40,500 - -- 41% done
+2026-03-16 23:21:51,519 - -- 45% done
+2026-03-16 23:22:02,724 - -- 49% done
+2026-03-16 23:22:13,920 - -- 53% done
+2026-03-16 23:22:25,098 - -- 57% done
+2026-03-16 23:22:36,380 - -- 61% done
+2026-03-16 23:22:47,676 - -- 65% done
+2026-03-16 23:22:59,119 - -- 69% done
+2026-03-16 23:23:10,521 - -- 73% done
+2026-03-16 23:23:21,024 - -- 77% done
+2026-03-16 23:23:31,405 - -- 81% done
+2026-03-16 23:23:42,817 - -- 85% done
+2026-03-16 23:23:54,428 - -- 89% done
+2026-03-16 23:24:06,031 - -- 93% done
+2026-03-16 23:24:17,627 - -- 98% done
+2026-03-16 23:24:24,872 - -- 100% done
+2026-03-16 23:24:24,883 - Expanding window predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2303173/gpi_2303173_expanding_window_predictions.pkl
+2026-03-16 23:24:25,578 - 
+Final Performance:
+2026-03-16 23:24:25,578 - RMSE: 0.00019 | MAE: 0.00015 | R2: 0.87701
+2026-03-16 23:24:29,900 - gpi: 2326162, lat: -36.3551139831543, lon: 143.43472290039062
+2026-03-16 23:24:29,914 - Training data size: 10080
+2026-03-16 23:24:29,914 - Testing data size: 2520
+2026-03-16 23:24:29,918 - 
+--- Baseline Model Performance ---
+2026-03-16 23:24:29,926 - 
+Climatology Model (Monthly Average):
+2026-03-16 23:24:29,926 -   RMSE: 0.00112
+2026-03-16 23:24:29,926 -   MAE: 0.00076
+2026-03-16 23:24:29,927 -   R2: 0.20795
+2026-03-16 23:24:29,927 -   Temporal Correlation: 0.48210
+2026-03-16 23:24:29,929 - 
+Random Noise Baseline:
+2026-03-16 23:24:29,930 -   RMSE: 0.00176
+2026-03-16 23:24:29,930 -   MAE: 0.00142
+2026-03-16 23:24:29,930 -   R2: -0.98378
+2026-03-16 23:24:29,931 -   Temporal Correlation: -0.00751
+2026-03-16 23:24:29,931 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-16 23:24:29,931 - 
+--- Training XGBRegressor ---
+2026-03-16 23:28:01,511 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.6, 'learning_rate': 0.1411311942741421, 'max_depth': 3, 'n_estimators': 500, 'reg_alpha': 0.08114126482543245, 'reg_lambda': 9.837944658249507e-05, 'subsample': 1.0})
+2026-03-16 23:28:01,515 - Best cross-validation RMSE for XGBRegressor: 0.0009
+2026-03-16 23:28:01,519 - -- Initial Scores --
+2026-03-16 23:28:01,520 - RMSE: 0.00074, MAE: 0.00059, R2: 0.65200
+2026-03-16 23:28:01,521 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-16 23:28:01,521 - Feature Importance from Shap
+2026-03-16 23:28:02,315 -              mean_abs_shap
+LAI           3.381777e-04
+sin_day       1.865051e-04
+swvl1_lag14   1.575793e-04
+stl1          1.252529e-04
+swvl1_lag7    1.043862e-04
+LAI_lag7      1.040188e-04
+year          9.400264e-05
+time_step     9.337682e-05
+LAI_lag14     7.731161e-05
+cos_day       5.427086e-05
+swvl1         4.905882e-05
+stl1_lag7     1.203805e-05
+stl1_lag14    9.921126e-06
+tp_lag14      3.468523e-06
+tp_lag7       2.839543e-06
+tp            8.188339e-07
+2026-03-16 23:28:02,318 - Initial predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2326162/gpi_2326162_initial_predictions.pkl
+2026-03-16 23:28:03,038 - Starting expanding window forecast for 2520 points...
+2026-03-16 23:28:13,149 - -- 4% done
+2026-03-16 23:28:24,104 - -- 8% done
+2026-03-16 23:28:35,145 - -- 12% done
+2026-03-16 23:28:46,195 - -- 16% done
+2026-03-16 23:28:57,317 - -- 20% done
+2026-03-16 23:29:08,459 - -- 24% done
+2026-03-16 23:29:19,859 - -- 28% done
+2026-03-16 23:29:31,341 - -- 32% done
+2026-03-16 23:29:41,695 - -- 36% done
+2026-03-16 23:29:53,023 - -- 40% done
+2026-03-16 23:30:04,755 - -- 44% done
+2026-03-16 23:30:15,849 - -- 48% done
+2026-03-16 23:30:27,146 - -- 52% done
+2026-03-16 23:30:38,666 - -- 56% done
+2026-03-16 23:30:50,196 - -- 60% done
+2026-03-16 23:31:01,796 - -- 63% done
+2026-03-16 23:31:13,477 - -- 67% done
+2026-03-16 23:31:25,136 - -- 71% done
+2026-03-16 23:31:36,785 - -- 75% done
+2026-03-16 23:31:47,151 - -- 79% done
+2026-03-16 23:31:57,456 - -- 83% done
+2026-03-16 23:32:07,852 - -- 87% done
+2026-03-16 23:32:19,889 - -- 91% done
+2026-03-16 23:32:31,828 - -- 95% done
+2026-03-16 23:32:43,867 - -- 99% done
+2026-03-16 23:32:46,460 - -- 100% done
+2026-03-16 23:32:46,472 - Expanding window predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2326162/gpi_2326162_expanding_window_predictions.pkl
+2026-03-16 23:32:47,203 - 
+Final Performance:
+2026-03-16 23:32:47,203 - RMSE: 0.00050 | MAE: 0.00037 | R2: 0.83925
+2026-03-16 23:32:51,773 - gpi: 2690836, lat: -21.798175811767578, lon: 117.08753967285156
+2026-03-16 23:32:51,786 - Training data size: 8681
+2026-03-16 23:32:51,787 - Testing data size: 2171
+2026-03-16 23:32:51,790 - 
+--- Baseline Model Performance ---
+2026-03-16 23:32:51,797 - 
+Climatology Model (Monthly Average):
+2026-03-16 23:32:51,798 -   RMSE: 0.00043
+2026-03-16 23:32:51,798 -   MAE: 0.00037
+2026-03-16 23:32:51,798 -   R2: -0.81333
+2026-03-16 23:32:51,799 -   Temporal Correlation: 0.50829
+2026-03-16 23:32:51,801 - 
+Random Noise Baseline:
+2026-03-16 23:32:51,802 -   RMSE: 0.00046
+2026-03-16 23:32:51,802 -   MAE: 0.00036
+2026-03-16 23:32:51,802 -   R2: -1.01575
+2026-03-16 23:32:51,802 -   Temporal Correlation: -0.02132
+2026-03-16 23:32:51,803 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-16 23:32:51,803 - 
+--- Training XGBRegressor ---
+2026-03-16 23:36:28,293 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.6106123438917219, 'learning_rate': 0.011388429659386934, 'max_depth': 4, 'n_estimators': 332, 'reg_alpha': 1.4391554368865578e-05, 'reg_lambda': 2.2573357676028107e-05, 'subsample': 0.6015589356619818})
+2026-03-16 23:36:28,298 - Best cross-validation RMSE for XGBRegressor: 0.0004
+2026-03-16 23:36:28,304 - -- Initial Scores --
+2026-03-16 23:36:28,305 - RMSE: 0.00034, MAE: 0.00027, R2: -0.12336
+2026-03-16 23:36:28,306 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-16 23:36:28,306 - Feature Importance from Shap
+2026-03-16 23:36:29,366 -              mean_abs_shap
+LAI           9.483868e-05
+sin_day       5.068672e-05
+cos_day       4.930793e-05
+swvl1_lag7    3.443373e-05
+swvl1_lag14   3.344974e-05
+swvl1         3.228854e-05
+time_step     3.062778e-05
+LAI_lag7      2.205479e-05
+LAI_lag14     2.068643e-05
+year          9.533162e-06
+tp            3.827662e-06
+tp_lag7       3.647477e-06
+tp_lag14      3.056672e-06
+stl1_lag14    7.863788e-07
+stl1_lag7     6.306821e-07
+stl1          5.061809e-07
+2026-03-16 23:36:29,369 - Initial predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2690836/gpi_2690836_initial_predictions.pkl
+2026-03-16 23:36:30,069 - Starting expanding window forecast for 2171 points...
+2026-03-16 23:36:48,758 - -- 5% done
+2026-03-16 23:37:06,387 - -- 9% done
+2026-03-16 23:37:22,902 - -- 14% done
+2026-03-16 23:37:41,666 - -- 18% done
+2026-03-16 23:38:00,647 - -- 23% done
+2026-03-16 23:38:16,891 - -- 28% done
+2026-03-16 23:38:33,695 - -- 32% done
+2026-03-16 23:38:51,721 - -- 37% done
+2026-03-16 23:39:08,538 - -- 41% done
+2026-03-16 23:39:27,856 - -- 46% done
+2026-03-16 23:39:47,331 - -- 51% done
+2026-03-16 23:40:06,789 - -- 55% done
+2026-03-16 23:40:26,256 - -- 60% done
+2026-03-16 23:40:46,162 - -- 64% done
+2026-03-16 23:41:05,851 - -- 69% done
+2026-03-16 23:41:25,776 - -- 74% done
+2026-03-16 23:41:45,501 - -- 78% done
+2026-03-16 23:42:05,330 - -- 83% done
+2026-03-16 23:42:24,751 - -- 88% done
+2026-03-16 23:42:44,469 - -- 92% done
+2026-03-16 23:43:04,615 - -- 97% done
+2026-03-16 23:43:18,981 - -- 100% done
+2026-03-16 23:43:18,992 - Expanding window predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2690836/gpi_2690836_expanding_window_predictions.pkl
+2026-03-16 23:43:19,806 - 
+Final Performance:
+2026-03-16 23:43:19,806 - RMSE: 0.00019 | MAE: 0.00016 | R2: 0.64757
+2026-03-16 23:43:24,408 - gpi: 2576119, lat: -26.174108505249023, lon: 115.25607299804688
+2026-03-16 23:43:24,421 - Training data size: 8784
+2026-03-16 23:43:24,422 - Testing data size: 2196
+2026-03-16 23:43:24,426 - 
+--- Baseline Model Performance ---
+2026-03-16 23:43:24,434 - 
+Climatology Model (Monthly Average):
+2026-03-16 23:43:24,434 -   RMSE: 0.00041
+2026-03-16 23:43:24,435 -   MAE: 0.00032
+2026-03-16 23:43:24,435 -   R2: -0.29660
+2026-03-16 23:43:24,435 -   Temporal Correlation: 0.16726
+2026-03-16 23:43:24,437 - 
+Random Noise Baseline:
+2026-03-16 23:43:24,438 -   RMSE: 0.00051
+2026-03-16 23:43:24,438 -   MAE: 0.00041
+2026-03-16 23:43:24,438 -   R2: -1.04800
+2026-03-16 23:43:24,439 -   Temporal Correlation: -0.03558
+2026-03-16 23:43:24,439 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-16 23:43:24,439 - 
+--- Training XGBRegressor ---
+2026-03-16 23:46:52,162 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.7133507881678286, 'learning_rate': 0.11715885243457445, 'max_depth': 4, 'n_estimators': 144, 'reg_alpha': 0.0012898479005352026, 'reg_lambda': 7.921989106424995, 'subsample': 0.7617392428886616})
+2026-03-16 23:46:52,167 - Best cross-validation RMSE for XGBRegressor: 0.0004
+2026-03-16 23:46:52,171 - -- Initial Scores --
+2026-03-16 23:46:52,171 - RMSE: 0.00035, MAE: 0.00030, R2: 0.03607
+2026-03-16 23:46:52,172 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-16 23:46:52,173 - Feature Importance from Shap
+2026-03-16 23:46:52,897 -              mean_abs_shap
+time_step     2.746750e-04
+year          4.172248e-05
+LAI_lag14     3.113539e-05
+cos_day       2.820929e-05
+sin_day       2.673091e-05
+LAI           2.435039e-05
+tp_lag14      1.740757e-05
+LAI_lag7      1.218561e-05
+swvl1_lag14   6.413602e-06
+tp_lag7       4.877390e-06
+tp            4.679922e-06
+swvl1_lag7    4.133313e-06
+swvl1         2.506345e-06
+stl1_lag14    2.469347e-06
+stl1_lag7     1.624188e-07
+stl1          0.000000e+00
+2026-03-16 23:46:52,900 - Initial predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2576119/gpi_2576119_initial_predictions.pkl
+2026-03-16 23:46:53,600 - Starting expanding window forecast for 2196 points...
+2026-03-16 23:46:58,977 - -- 5% done
+2026-03-16 23:47:04,603 - -- 9% done
+2026-03-16 23:47:10,764 - -- 14% done
+2026-03-16 23:47:16,825 - -- 18% done
+2026-03-16 23:47:22,898 - -- 23% done
+2026-03-16 23:47:29,060 - -- 27% done
+2026-03-16 23:47:35,246 - -- 32% done
+2026-03-16 23:47:41,403 - -- 36% done
+2026-03-16 23:47:46,845 - -- 41% done
+2026-03-16 23:47:52,822 - -- 46% done
+2026-03-16 23:47:59,006 - -- 50% done
+2026-03-16 23:48:05,175 - -- 55% done
+2026-03-16 23:48:11,355 - -- 59% done
+2026-03-16 23:48:17,594 - -- 64% done
+2026-03-16 23:48:23,815 - -- 68% done
+2026-03-16 23:48:30,095 - -- 73% done
+2026-03-16 23:48:36,375 - -- 77% done
+2026-03-16 23:48:41,962 - -- 82% done
+2026-03-16 23:48:48,124 - -- 87% done
+2026-03-16 23:48:54,480 - -- 91% done
+2026-03-16 23:49:00,874 - -- 96% done
+2026-03-16 23:49:07,216 - -- 100% done
+2026-03-16 23:49:07,227 - Expanding window predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2576119/gpi_2576119_expanding_window_predictions.pkl
+2026-03-16 23:49:07,927 - 
+Final Performance:
+2026-03-16 23:49:07,928 - RMSE: 0.00018 | MAE: 0.00015 | R2: 0.74095
+2026-03-16 23:49:12,603 - gpi: 2379934, lat: -34.06947708129883, lon: 115.94622802734375
+2026-03-16 23:49:12,617 - Training data size: 9877
+2026-03-16 23:49:12,617 - Testing data size: 2470
+2026-03-16 23:49:12,621 - 
+--- Baseline Model Performance ---
+2026-03-16 23:49:12,629 - 
+Climatology Model (Monthly Average):
+2026-03-16 23:49:12,629 -   RMSE: 0.00050
+2026-03-16 23:49:12,630 -   MAE: 0.00042
+2026-03-16 23:49:12,630 -   R2: 0.30513
+2026-03-16 23:49:12,630 -   Temporal Correlation: 0.59012
+2026-03-16 23:49:12,633 - 
+Random Noise Baseline:
+2026-03-16 23:49:12,633 -   RMSE: 0.00084
+2026-03-16 23:49:12,633 -   MAE: 0.00068
+2026-03-16 23:49:12,633 -   R2: -0.99665
+2026-03-16 23:49:12,634 -   Temporal Correlation: -0.01588
+2026-03-16 23:49:12,634 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-16 23:49:12,634 - 
+--- Training XGBRegressor ---
+2026-03-16 23:52:54,861 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.6, 'learning_rate': 0.12338896437589639, 'max_depth': 6, 'n_estimators': 70, 'reg_alpha': 0.07887839656711122, 'reg_lambda': 10.0, 'subsample': 0.8138254870466559})
+2026-03-16 23:52:54,866 - Best cross-validation RMSE for XGBRegressor: 0.0005
+2026-03-16 23:52:54,870 - -- Initial Scores --
+2026-03-16 23:52:54,870 - RMSE: 0.00053, MAE: 0.00045, R2: 0.22662
+2026-03-16 23:52:54,871 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-16 23:52:54,871 - Feature Importance from Shap
+2026-03-16 23:52:55,641 -              mean_abs_shap
+cos_day           0.000158
+time_step         0.000089
+swvl1             0.000052
+stl1              0.000048
+swvl1_lag7        0.000036
+year              0.000030
+stl1_lag14        0.000026
+stl1_lag7         0.000022
+LAI_lag14         0.000019
+sin_day           0.000018
+LAI               0.000011
+swvl1_lag14       0.000010
+LAI_lag7          0.000009
+tp_lag14          0.000007
+tp                0.000006
+tp_lag7           0.000004
+2026-03-16 23:52:55,644 - Initial predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2379934/gpi_2379934_initial_predictions.pkl
+2026-03-16 23:52:56,381 - Starting expanding window forecast for 2470 points...
+2026-03-16 23:53:01,029 - -- 4% done
+2026-03-16 23:53:05,089 - -- 8% done
+2026-03-16 23:53:09,190 - -- 12% done
+2026-03-16 23:53:13,286 - -- 16% done
+2026-03-16 23:53:17,433 - -- 20% done
+2026-03-16 23:53:21,566 - -- 24% done
+2026-03-16 23:53:26,115 - -- 28% done
+2026-03-16 23:53:31,002 - -- 32% done
+2026-03-16 23:53:35,918 - -- 36% done
+2026-03-16 23:53:40,864 - -- 40% done
+2026-03-16 23:53:45,861 - -- 45% done
+2026-03-16 23:53:50,676 - -- 49% done
+2026-03-16 23:53:55,688 - -- 53% done
+2026-03-16 23:54:00,702 - -- 57% done
+2026-03-16 23:54:05,726 - -- 61% done
+2026-03-16 23:54:10,795 - -- 65% done
+2026-03-16 23:54:15,905 - -- 69% done
+2026-03-16 23:54:21,052 - -- 73% done
+2026-03-16 23:54:26,219 - -- 77% done
+2026-03-16 23:54:31,433 - -- 81% done
+2026-03-16 23:54:36,598 - -- 85% done
+2026-03-16 23:54:41,131 - -- 89% done
+2026-03-16 23:54:46,204 - -- 93% done
+2026-03-16 23:54:51,058 - -- 97% done
+2026-03-16 23:54:54,361 - -- 100% done
+2026-03-16 23:54:54,373 - Expanding window predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2379934/gpi_2379934_expanding_window_predictions.pkl
+2026-03-16 23:54:55,115 - 
+Final Performance:
+2026-03-16 23:54:55,115 - RMSE: 0.00040 | MAE: 0.00034 | R2: 0.55614
+2026-03-16 23:54:59,539 - gpi: 2402792, lat: -33.116050720214844, lon: 123.47557067871094
+2026-03-16 23:54:59,553 - Training data size: 9564
+2026-03-16 23:54:59,553 - Testing data size: 2392
+2026-03-16 23:54:59,557 - 
+--- Baseline Model Performance ---
+2026-03-16 23:54:59,564 - 
+Climatology Model (Monthly Average):
+2026-03-16 23:54:59,564 -   RMSE: 0.00223
+2026-03-16 23:54:59,565 -   MAE: 0.00218
+2026-03-16 23:54:59,565 -   R2: -25.36500
+2026-03-16 23:54:59,565 -   Temporal Correlation: 0.23534
+2026-03-16 23:54:59,568 - 
+Random Noise Baseline:
+2026-03-16 23:54:59,568 -   RMSE: 0.00061
+2026-03-16 23:54:59,569 -   MAE: 0.00049
+2026-03-16 23:54:59,569 -   R2: -0.95611
+2026-03-16 23:54:59,569 -   Temporal Correlation: 0.00879
+2026-03-16 23:54:59,570 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-16 23:54:59,570 - 
+--- Training XGBRegressor ---
+2026-03-16 23:58:28,964 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.8150623207214484, 'learning_rate': 0.04095593614549688, 'max_depth': 3, 'n_estimators': 480, 'reg_alpha': 3.763044577975057e-06, 'reg_lambda': 0.06271117497877181, 'subsample': 1.0})
+2026-03-16 23:58:28,968 - Best cross-validation RMSE for XGBRegressor: 0.0007
+2026-03-16 23:58:28,974 - -- Initial Scores --
+2026-03-16 23:58:28,974 - RMSE: 0.00064, MAE: 0.00055, R2: -1.15842
+2026-03-16 23:58:28,975 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-16 23:58:28,975 - Feature Importance from Shap
+2026-03-16 23:58:29,825 -              mean_abs_shap
+time_step     2.392411e-03
+year          1.536416e-04
+LAI           6.788987e-05
+cos_day       6.694805e-05
+LAI_lag7      5.682215e-05
+LAI_lag14     4.218593e-05
+sin_day       3.503193e-05
+stl1_lag14    2.440518e-05
+tp            2.117064e-05
+swvl1         1.707300e-05
+tp_lag7       1.696470e-05
+stl1_lag7     1.678100e-05
+tp_lag14      7.660840e-06
+swvl1_lag7    6.079994e-06
+swvl1_lag14   5.566432e-06
+stl1          2.284229e-08
+2026-03-16 23:58:29,828 - Initial predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2402792/gpi_2402792_initial_predictions.pkl
+2026-03-16 23:58:30,532 - Starting expanding window forecast for 2392 points...
+2026-03-16 23:58:45,320 - -- 4% done
+2026-03-16 23:59:00,192 - -- 8% done
+2026-03-16 23:59:15,168 - -- 13% done
+2026-03-16 23:59:30,195 - -- 17% done
+2026-03-16 23:59:45,264 - -- 21% done
+2026-03-17 00:00:00,495 - -- 25% done
+2026-03-17 00:00:15,761 - -- 29% done
+2026-03-17 00:00:31,205 - -- 33% done
+2026-03-17 00:00:46,655 - -- 38% done
+2026-03-17 00:01:00,249 - -- 42% done
+2026-03-17 00:01:13,756 - -- 46% done
+2026-03-17 00:01:27,391 - -- 50% done
+2026-03-17 00:01:41,068 - -- 54% done
+2026-03-17 00:01:56,633 - -- 59% done
+2026-03-17 00:02:10,573 - -- 63% done
+2026-03-17 00:02:26,380 - -- 67% done
+2026-03-17 00:02:42,500 - -- 71% done
+2026-03-17 00:02:58,301 - -- 75% done
+2026-03-17 00:03:12,416 - -- 79% done
+2026-03-17 00:03:28,729 - -- 84% done
+2026-03-17 00:03:42,815 - -- 88% done
+2026-03-17 00:03:57,755 - -- 92% done
+2026-03-17 00:04:14,134 - -- 96% done
+2026-03-17 00:04:29,063 - -- 100% done
+2026-03-17 00:04:29,074 - Expanding window predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2402792/gpi_2402792_expanding_window_predictions.pkl
+2026-03-17 00:04:29,763 - 
+Final Performance:
+2026-03-17 00:04:29,764 - RMSE: 0.00020 | MAE: 0.00017 | R2: 0.78604
+2026-03-17 00:04:33,925 - gpi: 2485019, lat: -29.76472282409668, lon: 152.56103515625
+2026-03-17 00:04:33,938 - Training data size: 9243
+2026-03-17 00:04:33,939 - Testing data size: 2311
+2026-03-17 00:04:33,942 - 
+--- Baseline Model Performance ---
+2026-03-17 00:04:33,949 - 
+Climatology Model (Monthly Average):
+2026-03-17 00:04:33,950 -   RMSE: 0.00027
+2026-03-17 00:04:33,950 -   MAE: 0.00021
+2026-03-17 00:04:33,951 -   R2: -0.00343
+2026-03-17 00:04:33,951 -   Temporal Correlation: 0.17826
+2026-03-17 00:04:33,953 - 
+Random Noise Baseline:
+2026-03-17 00:04:33,953 -   RMSE: 0.00038
+2026-03-17 00:04:33,954 -   MAE: 0.00030
+2026-03-17 00:04:33,954 -   R2: -0.98345
+2026-03-17 00:04:33,954 -   Temporal Correlation: -0.00229
+2026-03-17 00:04:33,955 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-17 00:04:33,955 - 
+--- Training XGBRegressor ---
+2026-03-17 00:07:39,812 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.9349553422213137, 'learning_rate': 0.2017268796559709, 'max_depth': 5, 'n_estimators': 478, 'reg_alpha': 1.1191683201424942, 'reg_lambda': 2.7301756309728974e-06, 'subsample': 0.65532341531143})
+2026-03-17 00:07:39,817 - Best cross-validation RMSE for XGBRegressor: 0.0004
+2026-03-17 00:07:39,822 - -- Initial Scores --
+2026-03-17 00:07:39,822 - RMSE: 0.00027, MAE: 0.00022, R2: -0.00910
+2026-03-17 00:07:39,823 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-17 00:07:39,823 - Feature Importance from Shap
+2026-03-17 00:07:40,635 -              mean_abs_shap
+swvl1                  0.0
+stl1                   0.0
+tp                     0.0
+LAI                    0.0
+swvl1_lag7             0.0
+stl1_lag7              0.0
+tp_lag7                0.0
+LAI_lag7               0.0
+swvl1_lag14            0.0
+stl1_lag14             0.0
+tp_lag14               0.0
+LAI_lag14              0.0
+year                   0.0
+sin_day                0.0
+cos_day                0.0
+time_step              0.0
+2026-03-17 00:07:40,639 - Initial predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2485019/gpi_2485019_initial_predictions.pkl
+2026-03-17 00:07:41,310 - Starting expanding window forecast for 2311 points...
+2026-03-17 00:07:51,775 - -- 4% done
+2026-03-17 00:08:02,300 - -- 9% done
+2026-03-17 00:08:12,898 - -- 13% done
+2026-03-17 00:08:23,546 - -- 17% done
+2026-03-17 00:08:34,170 - -- 22% done
+2026-03-17 00:08:44,924 - -- 26% done
+2026-03-17 00:08:54,801 - -- 30% done
+2026-03-17 00:09:05,504 - -- 35% done
+2026-03-17 00:09:16,378 - -- 39% done
+2026-03-17 00:09:26,376 - -- 43% done
+2026-03-17 00:09:37,441 - -- 48% done
+2026-03-17 00:09:48,639 - -- 52% done
+2026-03-17 00:09:58,741 - -- 56% done
+2026-03-17 00:10:08,860 - -- 61% done
+2026-03-17 00:10:19,598 - -- 65% done
+2026-03-17 00:10:30,938 - -- 69% done
+2026-03-17 00:10:42,295 - -- 74% done
+2026-03-17 00:10:53,700 - -- 78% done
+2026-03-17 00:11:05,159 - -- 82% done
+2026-03-17 00:11:15,886 - -- 87% done
+2026-03-17 00:11:27,197 - -- 91% done
+2026-03-17 00:11:38,758 - -- 95% done
+2026-03-17 00:11:50,327 - -- 100% done
+2026-03-17 00:11:51,641 - -- 100% done
+2026-03-17 00:11:51,654 - Expanding window predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2485019/gpi_2485019_expanding_window_predictions.pkl
+2026-03-17 00:11:52,357 - 
+Final Performance:
+2026-03-17 00:11:52,357 - RMSE: 0.00027 | MAE: 0.00022 | R2: -0.00737
+2026-03-17 00:11:56,729 - gpi: 2425315, lat: -32.18633270263672, lon: 116.10587310791016
+2026-03-17 00:11:56,742 - Training data size: 9052
+2026-03-17 00:11:56,742 - Testing data size: 2264
+2026-03-17 00:11:56,746 - 
+--- Baseline Model Performance ---
+2026-03-17 00:11:56,753 - 
+Climatology Model (Monthly Average):
+2026-03-17 00:11:56,753 -   RMSE: 0.00069
+2026-03-17 00:11:56,753 -   MAE: 0.00056
+2026-03-17 00:11:56,754 -   R2: -1.31695
+2026-03-17 00:11:56,754 -   Temporal Correlation: 0.47492
+2026-03-17 00:11:56,756 - 
+Random Noise Baseline:
+2026-03-17 00:11:56,756 -   RMSE: 0.00064
+2026-03-17 00:11:56,757 -   MAE: 0.00051
+2026-03-17 00:11:56,757 -   R2: -0.99659
+2026-03-17 00:11:56,757 -   Temporal Correlation: -0.00946
+2026-03-17 00:11:56,757 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-17 00:11:56,758 - 
+--- Training XGBRegressor ---
+2026-03-17 00:15:19,607 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.8496424743230695, 'learning_rate': 0.10290168084448198, 'max_depth': 3, 'n_estimators': 500, 'reg_alpha': 0.0553175311865177, 'reg_lambda': 1e-06, 'subsample': 0.9538582420993313})
+2026-03-17 00:15:19,613 - Best cross-validation RMSE for XGBRegressor: 0.0006
+2026-03-17 00:15:19,617 - -- Initial Scores --
+2026-03-17 00:15:19,617 - RMSE: 0.00044, MAE: 0.00037, R2: 0.03755
+2026-03-17 00:15:19,618 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-17 00:15:19,618 - Feature Importance from Shap
+2026-03-17 00:15:20,359 -              mean_abs_shap
+time_step     5.317554e-04
+LAI_lag7      9.156060e-05
+cos_day       8.532387e-05
+LAI           7.205729e-05
+LAI_lag14     5.461319e-05
+year          2.632767e-05
+swvl1         2.163228e-05
+sin_day       1.816042e-05
+swvl1_lag7    1.572222e-05
+swvl1_lag14   1.162197e-05
+stl1_lag7     4.927664e-06
+stl1_lag14    3.842050e-06
+tp_lag14      2.928118e-06
+tp_lag7       9.528744e-07
+tp            5.604443e-07
+stl1          0.000000e+00
+2026-03-17 00:15:20,362 - Initial predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2425315/gpi_2425315_initial_predictions.pkl
+2026-03-17 00:15:21,071 - Starting expanding window forecast for 2264 points...
+2026-03-17 00:15:31,249 - -- 4% done
+2026-03-17 00:15:41,520 - -- 9% done
+2026-03-17 00:15:51,948 - -- 13% done
+2026-03-17 00:16:02,326 - -- 18% done
+2026-03-17 00:16:13,063 - -- 22% done
+2026-03-17 00:16:24,723 - -- 27% done
+2026-03-17 00:16:36,435 - -- 31% done
+2026-03-17 00:16:48,171 - -- 35% done
+2026-03-17 00:17:00,013 - -- 40% done
+2026-03-17 00:17:11,312 - -- 44% done
+2026-03-17 00:17:23,173 - -- 49% done
+2026-03-17 00:17:35,131 - -- 53% done
+2026-03-17 00:17:47,139 - -- 57% done
+2026-03-17 00:17:58,339 - -- 62% done
+2026-03-17 00:18:09,203 - -- 66% done
+2026-03-17 00:18:21,557 - -- 71% done
+2026-03-17 00:18:33,860 - -- 75% done
+2026-03-17 00:18:46,138 - -- 80% done
+2026-03-17 00:18:58,492 - -- 84% done
+2026-03-17 00:19:10,866 - -- 88% done
+2026-03-17 00:19:23,263 - -- 93% done
+2026-03-17 00:19:35,262 - -- 97% done
+2026-03-17 00:19:43,440 - -- 100% done
+2026-03-17 00:19:43,450 - Expanding window predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2425315/gpi_2425315_expanding_window_predictions.pkl
+2026-03-17 00:19:44,274 - 
+Final Performance:
+2026-03-17 00:19:44,275 - RMSE: 0.00036 | MAE: 0.00029 | R2: 0.36827
+2026-03-17 00:19:47,581 - gpi: 2298437, lat: -37.55928421020508, lon: 146.19300842285156
+2026-03-17 00:19:47,595 - Training data size: 9673
+2026-03-17 00:19:47,595 - Testing data size: 2419
+2026-03-17 00:19:47,599 - 
+--- Baseline Model Performance ---
+2026-03-17 00:19:47,606 - 
+Climatology Model (Monthly Average):
+2026-03-17 00:19:47,606 -   RMSE: 0.00034
+2026-03-17 00:19:47,607 -   MAE: 0.00029
+2026-03-17 00:19:47,607 -   R2: -0.18479
+2026-03-17 00:19:47,608 -   Temporal Correlation: -0.06271
+2026-03-17 00:19:47,610 - 
+Random Noise Baseline:
+2026-03-17 00:19:47,610 -   RMSE: 0.00044
+2026-03-17 00:19:47,610 -   MAE: 0.00035
+2026-03-17 00:19:47,611 -   R2: -0.98165
+2026-03-17 00:19:47,611 -   Temporal Correlation: -0.00477
+2026-03-17 00:19:47,611 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-17 00:19:47,612 - 
+--- Training XGBRegressor ---
+2026-03-17 00:23:44,859 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.9987420105562023, 'learning_rate': 0.19841207469247626, 'max_depth': 3, 'n_estimators': 177, 'reg_alpha': 0.01734653402481326, 'reg_lambda': 0.7563854195753472, 'subsample': 0.9382501911616101})
+2026-03-17 00:23:44,864 - Best cross-validation RMSE for XGBRegressor: 0.0003
+2026-03-17 00:23:44,867 - -- Initial Scores --
+2026-03-17 00:23:44,868 - RMSE: 0.00034, MAE: 0.00027, R2: -0.15878
+2026-03-17 00:23:44,869 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-17 00:23:44,870 - Feature Importance from Shap
+2026-03-17 00:23:45,699 -              mean_abs_shap
+cos_day       4.737328e-05
+time_step     4.317739e-05
+sin_day       4.247959e-05
+LAI_lag7      1.981330e-05
+swvl1         1.380625e-05
+LAI_lag14     1.278850e-05
+year          1.185026e-05
+LAI           9.008122e-06
+stl1          8.316732e-06
+swvl1_lag7    5.099307e-06
+stl1_lag14    1.684891e-06
+stl1_lag7     5.107375e-07
+swvl1_lag14   2.774235e-07
+tp_lag7       9.742130e-08
+tp_lag14      7.866546e-08
+tp            0.000000e+00
+2026-03-17 00:23:45,702 - Initial predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2298437/gpi_2298437_initial_predictions.pkl
+2026-03-17 00:23:46,381 - Starting expanding window forecast for 2419 points...
+2026-03-17 00:23:51,947 - -- 4% done
+2026-03-17 00:23:57,520 - -- 8% done
+2026-03-17 00:24:03,121 - -- 12% done
+2026-03-17 00:24:08,728 - -- 17% done
+2026-03-17 00:24:14,459 - -- 21% done
+2026-03-17 00:24:20,185 - -- 25% done
+2026-03-17 00:24:25,928 - -- 29% done
+2026-03-17 00:24:31,683 - -- 33% done
+2026-03-17 00:24:37,432 - -- 37% done
+2026-03-17 00:24:43,252 - -- 41% done
+2026-03-17 00:24:49,099 - -- 45% done
+2026-03-17 00:24:54,968 - -- 50% done
+2026-03-17 00:25:00,878 - -- 54% done
+2026-03-17 00:25:06,797 - -- 58% done
+2026-03-17 00:25:12,736 - -- 62% done
+2026-03-17 00:25:18,716 - -- 66% done
+2026-03-17 00:25:24,405 - -- 70% done
+2026-03-17 00:25:30,029 - -- 74% done
+2026-03-17 00:25:36,107 - -- 79% done
+2026-03-17 00:25:42,150 - -- 83% done
+2026-03-17 00:25:47,835 - -- 87% done
+2026-03-17 00:25:53,427 - -- 91% done
+2026-03-17 00:25:59,541 - -- 95% done
+2026-03-17 00:26:05,724 - -- 99% done
+2026-03-17 00:26:06,898 - -- 100% done
+2026-03-17 00:26:06,910 - Expanding window predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2298437/gpi_2298437_expanding_window_predictions.pkl
+2026-03-17 00:26:07,611 - 
+Final Performance:
+2026-03-17 00:26:07,612 - RMSE: 0.00021 | MAE: 0.00016 | R2: 0.56573
+2026-03-17 00:26:12,201 - gpi: 2848274, lat: -15.99067211151123, lon: 129.7310333251953
+2026-03-17 00:26:12,213 - Training data size: 7908
+2026-03-17 00:26:12,214 - Testing data size: 1977
+2026-03-17 00:26:12,217 - 
+--- Baseline Model Performance ---
+2026-03-17 00:26:12,224 - 
+Climatology Model (Monthly Average):
+2026-03-17 00:26:12,224 -   RMSE: 0.00093
+2026-03-17 00:26:12,224 -   MAE: 0.00072
+2026-03-17 00:26:12,225 -   R2: 0.58134
+2026-03-17 00:26:12,225 -   Temporal Correlation: 0.81559
+2026-03-17 00:26:12,228 - 
+Random Noise Baseline:
+2026-03-17 00:26:12,228 -   RMSE: 0.00198
+2026-03-17 00:26:12,229 -   MAE: 0.00152
+2026-03-17 00:26:12,229 -   R2: -0.90352
+2026-03-17 00:26:12,229 -   Temporal Correlation: 0.04033
+2026-03-17 00:26:12,230 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-17 00:26:12,230 - 
+--- Training XGBRegressor ---
+2026-03-17 00:29:47,650 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.6106123438917219, 'learning_rate': 0.011388429659386934, 'max_depth': 4, 'n_estimators': 332, 'reg_alpha': 1.4391554368865578e-05, 'reg_lambda': 2.2573357676028107e-05, 'subsample': 0.6015589356619818})
+2026-03-17 00:29:47,656 - Best cross-validation RMSE for XGBRegressor: 0.0008
+2026-03-17 00:29:47,662 - -- Initial Scores --
+2026-03-17 00:29:47,662 - RMSE: 0.00067, MAE: 0.00054, R2: 0.77958
+2026-03-17 00:29:47,664 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-17 00:29:47,664 - Feature Importance from Shap
+2026-03-17 00:29:48,702 -              mean_abs_shap
+LAI               0.000557
+LAI_lag7          0.000288
+LAI_lag14         0.000157
+sin_day           0.000139
+swvl1_lag14       0.000060
+swvl1             0.000055
+swvl1_lag7        0.000051
+stl1_lag14        0.000046
+time_step         0.000046
+stl1              0.000042
+stl1_lag7         0.000036
+year              0.000027
+cos_day           0.000014
+tp                0.000005
+tp_lag14          0.000003
+tp_lag7           0.000002
+2026-03-17 00:29:48,705 - Initial predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2848274/gpi_2848274_initial_predictions.pkl
+2026-03-17 00:29:49,401 - Starting expanding window forecast for 1977 points...
+2026-03-17 00:30:08,496 - -- 5% done
+2026-03-17 00:30:27,683 - -- 10% done
+2026-03-17 00:30:46,829 - -- 15% done
+2026-03-17 00:31:05,961 - -- 20% done
+2026-03-17 00:31:25,036 - -- 25% done
+2026-03-17 00:31:42,348 - -- 30% done
+2026-03-17 00:31:58,625 - -- 35% done
+2026-03-17 00:32:14,780 - -- 40% done
+2026-03-17 00:32:31,502 - -- 46% done
+2026-03-17 00:32:50,950 - -- 51% done
+2026-03-17 00:33:10,196 - -- 56% done
+2026-03-17 00:33:29,564 - -- 61% done
+2026-03-17 00:33:49,158 - -- 66% done
+2026-03-17 00:34:08,674 - -- 71% done
+2026-03-17 00:34:28,286 - -- 76% done
+2026-03-17 00:34:48,179 - -- 81% done
+2026-03-17 00:35:07,976 - -- 86% done
+2026-03-17 00:35:27,824 - -- 91% done
+2026-03-17 00:35:47,802 - -- 96% done
+2026-03-17 00:36:03,235 - -- 100% done
+2026-03-17 00:36:03,245 - Expanding window predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2848274/gpi_2848274_expanding_window_predictions.pkl
+2026-03-17 00:36:04,048 - 
+Final Performance:
+2026-03-17 00:36:04,048 - RMSE: 0.00038 | MAE: 0.00030 | R2: 0.93098
+2026-03-17 00:36:08,732 - gpi: 2531738, lat: -27.908899307250977, lon: 127.3323745727539
+2026-03-17 00:36:08,745 - Training data size: 8882
+2026-03-17 00:36:08,745 - Testing data size: 2221
+2026-03-17 00:36:08,749 - 
+--- Baseline Model Performance ---
+2026-03-17 00:36:08,755 - 
+Climatology Model (Monthly Average):
+2026-03-17 00:36:08,756 -   RMSE: 0.00127
+2026-03-17 00:36:08,756 -   MAE: 0.00120
+2026-03-17 00:36:08,757 -   R2: -7.40255
+2026-03-17 00:36:08,757 -   Temporal Correlation: 0.19717
+2026-03-17 00:36:08,759 - 
+Random Noise Baseline:
+2026-03-17 00:36:08,759 -   RMSE: 0.00062
+2026-03-17 00:36:08,760 -   MAE: 0.00049
+2026-03-17 00:36:08,760 -   R2: -0.96275
+2026-03-17 00:36:08,760 -   Temporal Correlation: 0.00607
+2026-03-17 00:36:08,760 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-17 00:36:08,761 - 
+--- Training XGBRegressor ---
+2026-03-17 00:39:20,097 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.6, 'learning_rate': 0.1341102464472566, 'max_depth': 3, 'n_estimators': 500, 'reg_alpha': 7.685771620327832e-06, 'reg_lambda': 1e-06, 'subsample': 1.0})
+2026-03-17 00:39:20,103 - Best cross-validation RMSE for XGBRegressor: 0.0005
+2026-03-17 00:39:20,107 - -- Initial Scores --
+2026-03-17 00:39:20,107 - RMSE: 0.00038, MAE: 0.00032, R2: 0.26249
+2026-03-17 00:39:20,108 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-17 00:39:20,109 - Feature Importance from Shap
+2026-03-17 00:39:20,847 -              mean_abs_shap
+time_step         0.000627
+year              0.000385
+LAI               0.000085
+LAI_lag7          0.000069
+LAI_lag14         0.000035
+swvl1_lag14       0.000011
+stl1_lag7         0.000011
+sin_day           0.000010
+cos_day           0.000009
+tp                0.000007
+swvl1_lag7        0.000005
+stl1_lag14        0.000005
+tp_lag14          0.000005
+swvl1             0.000004
+stl1              0.000003
+tp_lag7           0.000001
+2026-03-17 00:39:20,850 - Initial predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2531738/gpi_2531738_initial_predictions.pkl
+2026-03-17 00:39:21,632 - Starting expanding window forecast for 2221 points...
+2026-03-17 00:39:30,473 - -- 5% done
+2026-03-17 00:39:39,206 - -- 9% done
+2026-03-17 00:39:48,076 - -- 14% done
+2026-03-17 00:39:57,228 - -- 18% done
+2026-03-17 00:40:07,631 - -- 23% done
+2026-03-17 00:40:17,975 - -- 27% done
+2026-03-17 00:40:28,429 - -- 32% done
+2026-03-17 00:40:38,772 - -- 36% done
+2026-03-17 00:40:49,394 - -- 41% done
+2026-03-17 00:40:59,703 - -- 45% done
+2026-03-17 00:41:10,083 - -- 50% done
+2026-03-17 00:41:20,492 - -- 54% done
+2026-03-17 00:41:31,105 - -- 59% done
+2026-03-17 00:41:41,642 - -- 63% done
+2026-03-17 00:41:52,428 - -- 68% done
+2026-03-17 00:42:03,174 - -- 72% done
+2026-03-17 00:42:14,033 - -- 77% done
+2026-03-17 00:42:24,882 - -- 81% done
+2026-03-17 00:42:35,732 - -- 86% done
+2026-03-17 00:42:46,612 - -- 90% done
+2026-03-17 00:42:57,634 - -- 95% done
+2026-03-17 00:43:08,674 - -- 99% done
+2026-03-17 00:43:10,985 - -- 100% done
+2026-03-17 00:43:10,997 - Expanding window predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2531738/gpi_2531738_expanding_window_predictions.pkl
+2026-03-17 00:43:11,690 - 
+Final Performance:
+2026-03-17 00:43:11,690 - RMSE: 0.00019 | MAE: 0.00016 | R2: 0.80712
+2026-03-17 00:43:16,524 - gpi: 2535275, lat: -27.769676208496094, lon: 122.37092590332031
+2026-03-17 00:43:16,537 - Training data size: 8613
+2026-03-17 00:43:16,537 - Testing data size: 2154
+2026-03-17 00:43:16,541 - 
+--- Baseline Model Performance ---
+2026-03-17 00:43:16,547 - 
+Climatology Model (Monthly Average):
+2026-03-17 00:43:16,547 -   RMSE: 0.00080
+2026-03-17 00:43:16,548 -   MAE: 0.00067
+2026-03-17 00:43:16,548 -   R2: -1.43266
+2026-03-17 00:43:16,549 -   Temporal Correlation: 0.27451
+2026-03-17 00:43:16,551 - 
+Random Noise Baseline:
+2026-03-17 00:43:16,552 -   RMSE: 0.00072
+2026-03-17 00:43:16,552 -   MAE: 0.00057
+2026-03-17 00:43:16,552 -   R2: -0.96898
+2026-03-17 00:43:16,553 -   Temporal Correlation: 0.00299
+2026-03-17 00:43:16,553 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-17 00:43:16,553 - 
+--- Training XGBRegressor ---
+2026-03-17 00:46:51,067 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.6014521229018973, 'learning_rate': 0.16144853360713746, 'max_depth': 8, 'n_estimators': 165, 'reg_alpha': 0.011236999294535673, 'reg_lambda': 8.375368839458797e-05, 'subsample': 0.7251357224938513})
+2026-03-17 00:46:51,072 - Best cross-validation RMSE for XGBRegressor: 0.0005
+2026-03-17 00:46:51,075 - -- Initial Scores --
+2026-03-17 00:46:51,076 - RMSE: 0.00045, MAE: 0.00036, R2: 0.22711
+2026-03-17 00:46:51,077 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-17 00:46:51,077 - Feature Importance from Shap
+2026-03-17 00:46:51,802 -              mean_abs_shap
+time_step     3.171122e-04
+year          1.398568e-04
+LAI           4.802566e-05
+LAI_lag14     4.362124e-05
+cos_day       4.153748e-05
+LAI_lag7      3.051068e-05
+swvl1_lag7    2.350673e-05
+stl1          2.184166e-05
+sin_day       2.149240e-05
+swvl1         1.794422e-05
+stl1_lag7     1.557762e-05
+swvl1_lag14   1.243774e-05
+stl1_lag14    1.199730e-05
+tp            1.190406e-05
+tp_lag14      3.820288e-06
+tp_lag7       5.490286e-07
+2026-03-17 00:46:51,805 - Initial predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2535275/gpi_2535275_initial_predictions.pkl
+2026-03-17 00:46:52,591 - Starting expanding window forecast for 2154 points...
+2026-03-17 00:46:58,809 - -- 5% done
+2026-03-17 00:47:05,033 - -- 9% done
+2026-03-17 00:47:11,292 - -- 14% done
+2026-03-17 00:47:17,568 - -- 19% done
+2026-03-17 00:47:23,829 - -- 23% done
+2026-03-17 00:47:30,167 - -- 28% done
+2026-03-17 00:47:36,587 - -- 32% done
+2026-03-17 00:47:42,985 - -- 37% done
+2026-03-17 00:47:49,443 - -- 42% done
+2026-03-17 00:47:55,892 - -- 46% done
+2026-03-17 00:48:02,422 - -- 51% done
+2026-03-17 00:48:09,000 - -- 56% done
+2026-03-17 00:48:15,648 - -- 60% done
+2026-03-17 00:48:22,272 - -- 65% done
+2026-03-17 00:48:28,973 - -- 70% done
+2026-03-17 00:48:35,685 - -- 74% done
+2026-03-17 00:48:42,443 - -- 79% done
+2026-03-17 00:48:49,278 - -- 84% done
+2026-03-17 00:48:56,143 - -- 88% done
+2026-03-17 00:49:03,053 - -- 93% done
+2026-03-17 00:49:10,031 - -- 97% done
+2026-03-17 00:49:13,820 - -- 100% done
+2026-03-17 00:49:13,831 - Expanding window predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2535275/gpi_2535275_expanding_window_predictions.pkl
+2026-03-17 00:49:14,528 - 
+Final Performance:
+2026-03-17 00:49:14,528 - RMSE: 0.00025 | MAE: 0.00019 | R2: 0.76285
+2026-03-17 00:49:19,163 - gpi: 2683385, lat: -22.078203201293945, lon: 127.4374771118164
+2026-03-17 00:49:19,175 - Training data size: 8212
+2026-03-17 00:49:19,175 - Testing data size: 2054
+2026-03-17 00:49:19,179 - 
+--- Baseline Model Performance ---
+2026-03-17 00:49:19,186 - 
+Climatology Model (Monthly Average):
+2026-03-17 00:49:19,186 -   RMSE: 0.00062
+2026-03-17 00:49:19,187 -   MAE: 0.00052
+2026-03-17 00:49:19,187 -   R2: -0.65682
+2026-03-17 00:49:19,187 -   Temporal Correlation: 0.09457
+2026-03-17 00:49:19,189 - 
+Random Noise Baseline:
+2026-03-17 00:49:19,190 -   RMSE: 0.00068
+2026-03-17 00:49:19,190 -   MAE: 0.00056
+2026-03-17 00:49:19,190 -   R2: -1.00635
+2026-03-17 00:49:19,190 -   Temporal Correlation: -0.01315
+2026-03-17 00:49:19,191 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-17 00:49:19,191 - 
+--- Training XGBRegressor ---
+2026-03-17 00:52:39,681 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.6066756703909554, 'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 500, 'reg_alpha': 0.0017658395200749087, 'reg_lambda': 8.715007784616892, 'subsample': 0.6010181916599362})
+2026-03-17 00:52:39,687 - Best cross-validation RMSE for XGBRegressor: 0.0005
+2026-03-17 00:52:39,693 - -- Initial Scores --
+2026-03-17 00:52:39,693 - RMSE: 0.00094, MAE: 0.00077, R2: -2.79370
+2026-03-17 00:52:39,694 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-17 00:52:39,694 - Feature Importance from Shap
+2026-03-17 00:52:40,629 -              mean_abs_shap
+LAI_lag14     2.199113e-04
+year          2.182671e-04
+time_step     2.093743e-04
+LAI_lag7      1.514136e-04
+LAI           8.614835e-05
+cos_day       5.135623e-05
+sin_day       3.857962e-05
+swvl1_lag14   1.271168e-05
+swvl1         1.144089e-05
+stl1_lag14    1.034277e-05
+swvl1_lag7    1.008163e-05
+stl1          4.408245e-06
+stl1_lag7     3.549965e-06
+tp_lag14      1.032187e-06
+tp            5.543546e-07
+tp_lag7       3.896816e-07
+2026-03-17 00:52:40,632 - Initial predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2683385/gpi_2683385_initial_predictions.pkl
+2026-03-17 00:52:41,347 - Starting expanding window forecast for 2054 points...
+2026-03-17 00:52:58,554 - -- 5% done
+2026-03-17 00:53:19,249 - -- 10% done
+2026-03-17 00:53:39,676 - -- 15% done
+2026-03-17 00:53:57,112 - -- 19% done
+2026-03-17 00:54:14,632 - -- 24% done
+2026-03-17 00:54:33,153 - -- 29% done
+2026-03-17 00:54:54,092 - -- 34% done
+2026-03-17 00:55:15,149 - -- 39% done
+2026-03-17 00:55:35,259 - -- 44% done
+2026-03-17 00:55:56,370 - -- 49% done
+2026-03-17 00:56:17,617 - -- 54% done
+2026-03-17 00:56:38,897 - -- 58% done
+2026-03-17 00:57:00,172 - -- 63% done
+2026-03-17 00:57:21,649 - -- 68% done
+2026-03-17 00:57:43,072 - -- 73% done
+2026-03-17 00:58:04,537 - -- 78% done
+2026-03-17 00:58:26,004 - -- 83% done
+2026-03-17 00:58:47,507 - -- 88% done
+2026-03-17 00:59:09,306 - -- 93% done
+2026-03-17 00:59:31,277 - -- 97% done
+2026-03-17 00:59:43,297 - -- 100% done
+2026-03-17 00:59:43,308 - Expanding window predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2683385/gpi_2683385_expanding_window_predictions.pkl
+2026-03-17 00:59:44,018 - 
+Final Performance:
+2026-03-17 00:59:44,019 - RMSE: 0.00030 | MAE: 0.00025 | R2: 0.60144
+2026-03-17 00:59:49,082 - gpi: 2717100, lat: -20.81525230407715, lon: 133.1725311279297
+2026-03-17 00:59:49,094 - Training data size: 8337
+2026-03-17 00:59:49,094 - Testing data size: 2085
+2026-03-17 00:59:49,098 - 
+--- Baseline Model Performance ---
+2026-03-17 00:59:49,105 - 
+Climatology Model (Monthly Average):
+2026-03-17 00:59:49,106 -   RMSE: 0.00059
+2026-03-17 00:59:49,106 -   MAE: 0.00045
+2026-03-17 00:59:49,106 -   R2: 0.06652
+2026-03-17 00:59:49,107 -   Temporal Correlation: 0.57187
+2026-03-17 00:59:49,109 - 
+Random Noise Baseline:
+2026-03-17 00:59:49,109 -   RMSE: 0.00086
+2026-03-17 00:59:49,110 -   MAE: 0.00068
+2026-03-17 00:59:49,110 -   R2: -0.96645
+2026-03-17 00:59:49,110 -   Temporal Correlation: 0.00615
+2026-03-17 00:59:49,111 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-17 00:59:49,111 - 
+--- Training XGBRegressor ---
+2026-03-17 01:03:13,571 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 1.0, 'learning_rate': 0.07840912711996566, 'max_depth': 4, 'n_estimators': 163, 'reg_alpha': 0.010927258376437361, 'reg_lambda': 3.6924742102363366, 'subsample': 1.0})
+2026-03-17 01:03:13,576 - Best cross-validation RMSE for XGBRegressor: 0.0005
+2026-03-17 01:03:13,580 - -- Initial Scores --
+2026-03-17 01:03:13,580 - RMSE: 0.00050, MAE: 0.00040, R2: 0.33045
+2026-03-17 01:03:13,581 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-17 01:03:13,582 - Feature Importance from Shap
+2026-03-17 01:03:14,304 -              mean_abs_shap
+LAI           1.525070e-04
+time_step     1.438250e-04
+LAI_lag7      1.273964e-04
+LAI_lag14     1.109329e-04
+year          1.870500e-05
+sin_day       1.805774e-05
+cos_day       1.445951e-05
+swvl1         1.117342e-05
+tp            1.096343e-05
+tp_lag14      6.748055e-06
+swvl1_lag7    3.371976e-06
+swvl1_lag14   1.638152e-06
+stl1_lag14    1.256755e-06
+stl1          7.111527e-07
+stl1_lag7     3.734375e-07
+tp_lag7       1.909882e-07
+2026-03-17 01:03:14,307 - Initial predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2717100/gpi_2717100_initial_predictions.pkl
+2026-03-17 01:03:14,992 - Starting expanding window forecast for 2085 points...
+2026-03-17 01:03:21,301 - -- 5% done
+2026-03-17 01:03:27,641 - -- 10% done
+2026-03-17 01:03:34,003 - -- 14% done
+2026-03-17 01:03:40,379 - -- 19% done
+2026-03-17 01:03:46,820 - -- 24% done
+2026-03-17 01:03:53,242 - -- 29% done
+2026-03-17 01:03:58,886 - -- 34% done
+2026-03-17 01:04:04,555 - -- 38% done
+2026-03-17 01:04:10,238 - -- 43% done
+2026-03-17 01:04:15,939 - -- 48% done
+2026-03-17 01:04:21,660 - -- 53% done
+2026-03-17 01:04:27,415 - -- 58% done
+2026-03-17 01:04:33,239 - -- 62% done
+2026-03-17 01:04:39,017 - -- 67% done
+2026-03-17 01:04:44,861 - -- 72% done
+2026-03-17 01:04:50,831 - -- 77% done
+2026-03-17 01:04:56,771 - -- 82% done
+2026-03-17 01:05:02,754 - -- 86% done
+2026-03-17 01:05:08,732 - -- 91% done
+2026-03-17 01:05:14,773 - -- 96% done
+2026-03-17 01:05:20,007 - -- 100% done
+2026-03-17 01:05:20,017 - Expanding window predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2717100/gpi_2717100_expanding_window_predictions.pkl
+2026-03-17 01:05:20,819 - 
+Final Performance:
+2026-03-17 01:05:20,819 - RMSE: 0.00030 | MAE: 0.00023 | R2: 0.76443
+2026-03-17 01:05:25,586 - gpi: 2687346, lat: -21.92927360534668, lon: 139.18408203125
+2026-03-17 01:05:25,598 - Training data size: 8573
+2026-03-17 01:05:25,599 - Testing data size: 2144
+2026-03-17 01:05:25,602 - 
+--- Baseline Model Performance ---
+2026-03-17 01:05:25,610 - 
+Climatology Model (Monthly Average):
+2026-03-17 01:05:25,610 -   RMSE: 0.00080
+2026-03-17 01:05:25,610 -   MAE: 0.00066
+2026-03-17 01:05:25,611 -   R2: -0.73317
+2026-03-17 01:05:25,611 -   Temporal Correlation: 0.00897
+2026-03-17 01:05:25,614 - 
+Random Noise Baseline:
+2026-03-17 01:05:25,614 -   RMSE: 0.00084
+2026-03-17 01:05:25,615 -   MAE: 0.00067
+2026-03-17 01:05:25,615 -   R2: -0.91749
+2026-03-17 01:05:25,616 -   Temporal Correlation: 0.02878
+2026-03-17 01:05:25,616 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-17 01:05:25,616 - 
+--- Training XGBRegressor ---
+2026-03-17 01:08:46,611 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.8814180850263971, 'learning_rate': 0.15210849133647836, 'max_depth': 3, 'n_estimators': 500, 'reg_alpha': 0.0683631510075847, 'reg_lambda': 10.0, 'subsample': 0.7512901016138324})
+2026-03-17 01:08:46,614 - Best cross-validation RMSE for XGBRegressor: 0.0006
+2026-03-17 01:08:46,618 - -- Initial Scores --
+2026-03-17 01:08:46,619 - RMSE: 0.00065, MAE: 0.00057, R2: -0.16141
+2026-03-17 01:08:46,620 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-17 01:08:46,620 - Feature Importance from Shap
+2026-03-17 01:08:47,340 -              mean_abs_shap
+LAI           2.163774e-04
+cos_day       9.191013e-05
+LAI_lag7      7.684506e-05
+swvl1         7.612092e-05
+time_step     5.813620e-05
+swvl1_lag7    4.628369e-05
+LAI_lag14     4.262384e-05
+sin_day       3.360889e-05
+swvl1_lag14   2.796914e-05
+year          1.312084e-05
+stl1          1.879464e-06
+tp            1.429197e-06
+tp_lag14      9.317298e-07
+stl1_lag14    6.693165e-07
+tp_lag7       0.000000e+00
+stl1_lag7     0.000000e+00
+2026-03-17 01:08:47,343 - Initial predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2687346/gpi_2687346_initial_predictions.pkl
+2026-03-17 01:08:48,060 - Starting expanding window forecast for 2144 points...
+2026-03-17 01:08:59,015 - -- 5% done
+2026-03-17 01:09:10,088 - -- 9% done
+2026-03-17 01:09:21,481 - -- 14% done
+2026-03-17 01:09:32,820 - -- 19% done
+2026-03-17 01:09:44,262 - -- 23% done
+2026-03-17 01:09:55,523 - -- 28% done
+2026-03-17 01:10:07,008 - -- 33% done
+2026-03-17 01:10:18,745 - -- 37% done
+2026-03-17 01:10:30,493 - -- 42% done
+2026-03-17 01:10:42,400 - -- 47% done
+2026-03-17 01:10:54,211 - -- 51% done
+2026-03-17 01:11:06,202 - -- 56% done
+2026-03-17 01:11:18,197 - -- 61% done
+2026-03-17 01:11:30,158 - -- 65% done
+2026-03-17 01:11:42,397 - -- 70% done
+2026-03-17 01:11:54,520 - -- 75% done
+2026-03-17 01:12:06,544 - -- 79% done
+2026-03-17 01:12:18,920 - -- 84% done
+2026-03-17 01:12:31,329 - -- 89% done
+2026-03-17 01:12:43,536 - -- 93% done
+2026-03-17 01:12:55,941 - -- 98% done
+2026-03-17 01:13:01,305 - -- 100% done
+2026-03-17 01:13:01,316 - Expanding window predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2687346/gpi_2687346_expanding_window_predictions.pkl
+2026-03-17 01:13:02,025 - 
+Final Performance:
+2026-03-17 01:13:02,025 - RMSE: 0.00042 | MAE: 0.00034 | R2: 0.51946
+2026-03-17 01:13:07,180 - gpi: 2601807, lat: -25.18142318725586, lon: 135.8131561279297
+2026-03-17 01:13:07,193 - Training data size: 8624
+2026-03-17 01:13:07,193 - Testing data size: 2156
+2026-03-17 01:13:07,197 - 
+--- Baseline Model Performance ---
+2026-03-17 01:13:07,204 - 
+Climatology Model (Monthly Average):
+2026-03-17 01:13:07,204 -   RMSE: 0.00203
+2026-03-17 01:13:07,204 -   MAE: 0.00164
+2026-03-17 01:13:07,204 -   R2: 0.02718
+2026-03-17 01:13:07,205 -   Temporal Correlation: 0.60534
+2026-03-17 01:13:07,207 - 
+Random Noise Baseline:
+2026-03-17 01:13:07,207 -   RMSE: 0.00290
+2026-03-17 01:13:07,207 -   MAE: 0.00232
+2026-03-17 01:13:07,208 -   R2: -0.99121
+2026-03-17 01:13:07,208 -   Temporal Correlation: -0.00827
+2026-03-17 01:13:07,208 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-17 01:13:07,208 - 
+--- Training XGBRegressor ---
+2026-03-17 01:17:03,260 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.6, 'learning_rate': 0.29999999999999993, 'max_depth': 6, 'n_estimators': 82, 'reg_alpha': 0.09796407695919752, 'reg_lambda': 10.0, 'subsample': 1.0})
+2026-03-17 01:17:03,263 - Best cross-validation RMSE for XGBRegressor: 0.0012
+2026-03-17 01:17:03,266 - -- Initial Scores --
+2026-03-17 01:17:03,267 - RMSE: 0.00224, MAE: 0.00169, R2: -0.18687
+2026-03-17 01:17:03,268 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-17 01:17:03,268 - Feature Importance from Shap
+2026-03-17 01:17:03,970 -              mean_abs_shap
+LAI               0.000645
+LAI_lag7          0.000423
+time_step         0.000385
+year              0.000232
+LAI_lag14         0.000200
+sin_day           0.000121
+swvl1_lag7        0.000074
+swvl1_lag14       0.000049
+cos_day           0.000048
+swvl1             0.000017
+stl1              0.000014
+tp_lag14          0.000011
+tp                0.000009
+stl1_lag14        0.000008
+stl1_lag7         0.000004
+tp_lag7           0.000002
+2026-03-17 01:17:03,973 - Initial predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2601807/gpi_2601807_initial_predictions.pkl
+2026-03-17 01:17:04,753 - Starting expanding window forecast for 2156 points...
+2026-03-17 01:17:08,307 - -- 5% done
+2026-03-17 01:17:11,883 - -- 9% done
+2026-03-17 01:17:15,516 - -- 14% done
+2026-03-17 01:17:19,151 - -- 19% done
+2026-03-17 01:17:22,825 - -- 23% done
+2026-03-17 01:17:26,522 - -- 28% done
+2026-03-17 01:17:30,264 - -- 32% done
+2026-03-17 01:17:33,993 - -- 37% done
+2026-03-17 01:17:37,740 - -- 42% done
+2026-03-17 01:17:41,504 - -- 46% done
+2026-03-17 01:17:45,294 - -- 51% done
+2026-03-17 01:17:49,133 - -- 56% done
+2026-03-17 01:17:53,007 - -- 60% done
+2026-03-17 01:17:56,815 - -- 65% done
+2026-03-17 01:18:00,214 - -- 70% done
+2026-03-17 01:18:03,590 - -- 74% done
+2026-03-17 01:18:06,999 - -- 79% done
+2026-03-17 01:18:10,892 - -- 83% done
+2026-03-17 01:18:14,886 - -- 88% done
+2026-03-17 01:18:18,893 - -- 93% done
+2026-03-17 01:18:22,929 - -- 97% done
+2026-03-17 01:18:24,896 - -- 100% done
+2026-03-17 01:18:24,906 - Expanding window predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2601807/gpi_2601807_expanding_window_predictions.pkl
+2026-03-17 01:18:25,580 - 
+Final Performance:
+2026-03-17 01:18:25,580 - RMSE: 0.00080 | MAE: 0.00058 | R2: 0.84711
+2026-03-17 01:18:30,171 - gpi: 2664556, lat: -22.788259506225586, lon: 141.12677001953125
+2026-03-17 01:18:30,204 - Training data size: 8591
+2026-03-17 01:18:30,204 - Testing data size: 2148
+2026-03-17 01:18:30,208 - 
+--- Baseline Model Performance ---
+2026-03-17 01:18:30,214 - 
+Climatology Model (Monthly Average):
+2026-03-17 01:18:30,215 -   RMSE: 0.00097
+2026-03-17 01:18:30,215 -   MAE: 0.00075
+2026-03-17 01:18:30,216 -   R2: -0.24847
+2026-03-17 01:18:30,216 -   Temporal Correlation: 0.04115
+2026-03-17 01:18:30,218 - 
+Random Noise Baseline:
+2026-03-17 01:18:30,218 -   RMSE: 0.00122
+2026-03-17 01:18:30,219 -   MAE: 0.00098
+2026-03-17 01:18:30,219 -   R2: -0.98205
+2026-03-17 01:18:30,220 -   Temporal Correlation: -0.00356
+2026-03-17 01:18:30,220 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-17 01:18:30,220 - 
+--- Training XGBRegressor ---
+2026-03-17 01:21:57,027 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.6, 'learning_rate': 0.10673849161400371, 'max_depth': 10, 'n_estimators': 454, 'reg_alpha': 0.07128798268543465, 'reg_lambda': 10.0, 'subsample': 0.6})
+2026-03-17 01:21:57,030 - Best cross-validation RMSE for XGBRegressor: 0.0006
+2026-03-17 01:21:57,034 - -- Initial Scores --
+2026-03-17 01:21:57,034 - RMSE: 0.00088, MAE: 0.00067, R2: -0.02809
+2026-03-17 01:21:57,036 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-17 01:21:57,036 - Feature Importance from Shap
+2026-03-17 01:21:57,771 -              mean_abs_shap
+LAI               0.000116
+LAI_lag14         0.000083
+LAI_lag7          0.000073
+time_step         0.000070
+cos_day           0.000033
+sin_day           0.000017
+swvl1             0.000017
+stl1_lag14        0.000013
+stl1              0.000012
+stl1_lag7         0.000011
+year              0.000010
+swvl1_lag14       0.000009
+tp                0.000009
+tp_lag14          0.000007
+swvl1_lag7        0.000007
+tp_lag7           0.000003
+2026-03-17 01:21:57,774 - Initial predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2664556/gpi_2664556_initial_predictions.pkl
+2026-03-17 01:21:58,479 - Starting expanding window forecast for 2148 points...
+2026-03-17 01:22:10,302 - -- 5% done
+2026-03-17 01:22:22,165 - -- 9% done
+2026-03-17 01:22:34,049 - -- 14% done
+2026-03-17 01:22:46,003 - -- 19% done
+2026-03-17 01:22:58,075 - -- 23% done
+2026-03-17 01:23:10,146 - -- 28% done
+2026-03-17 01:23:22,360 - -- 33% done
+2026-03-17 01:23:34,692 - -- 37% done
+2026-03-17 01:23:47,034 - -- 42% done
+2026-03-17 01:23:59,453 - -- 47% done
+2026-03-17 01:24:11,905 - -- 51% done
+2026-03-17 01:24:24,374 - -- 56% done
+2026-03-17 01:24:36,931 - -- 61% done
+2026-03-17 01:24:49,568 - -- 65% done
+2026-03-17 01:25:02,246 - -- 70% done
+2026-03-17 01:25:15,010 - -- 74% done
+2026-03-17 01:25:27,933 - -- 79% done
+2026-03-17 01:25:41,039 - -- 84% done
+2026-03-17 01:25:54,384 - -- 88% done
+2026-03-17 01:26:07,714 - -- 93% done
+2026-03-17 01:26:21,143 - -- 98% done
+2026-03-17 01:26:27,635 - -- 100% done
+2026-03-17 01:26:27,646 - Expanding window predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2664556/gpi_2664556_expanding_window_predictions.pkl
+2026-03-17 01:26:28,344 - 
+Final Performance:
+2026-03-17 01:26:28,344 - RMSE: 0.00051 | MAE: 0.00039 | R2: 0.65952
+2026-03-17 01:26:32,732 - gpi: 2551936, lat: -27.116165161132812, lon: 145.51409912109375
+2026-03-17 01:26:32,756 - Training data size: 9004
+2026-03-17 01:26:32,757 - Testing data size: 2251
+2026-03-17 01:26:32,760 - 
+--- Baseline Model Performance ---
+2026-03-17 01:26:32,767 - 
+Climatology Model (Monthly Average):
+2026-03-17 01:26:32,767 -   RMSE: 0.00046
+2026-03-17 01:26:32,768 -   MAE: 0.00037
+2026-03-17 01:26:32,768 -   R2: -0.31286
+2026-03-17 01:26:32,769 -   Temporal Correlation: 0.52562
+2026-03-17 01:26:32,770 - 
+Random Noise Baseline:
+2026-03-17 01:26:32,771 -   RMSE: 0.00056
+2026-03-17 01:26:32,771 -   MAE: 0.00045
+2026-03-17 01:26:32,771 -   R2: -0.92972
+2026-03-17 01:26:32,772 -   Temporal Correlation: 0.02345
+2026-03-17 01:26:32,772 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-17 01:26:32,772 - 
+--- Training XGBRegressor ---
+2026-03-17 01:29:25,992 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.9714100689597133, 'learning_rate': 0.11055084927117684, 'max_depth': 3, 'n_estimators': 342, 'reg_alpha': 0.049023205543775594, 'reg_lambda': 2.556902448422794e-06, 'subsample': 0.7460109635662351})
+2026-03-17 01:29:25,996 - Best cross-validation RMSE for XGBRegressor: 0.0004
+2026-03-17 01:29:26,001 - -- Initial Scores --
+2026-03-17 01:29:26,002 - RMSE: 0.00040, MAE: 0.00030, R2: 0.00657
+2026-03-17 01:29:26,003 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-17 01:29:26,003 - Feature Importance from Shap
+2026-03-17 01:29:26,742 -              mean_abs_shap
+time_step     1.795698e-04
+cos_day       9.184104e-05
+LAI           6.584222e-05
+LAI_lag14     4.406799e-05
+LAI_lag7      3.666108e-05
+sin_day       1.273648e-05
+stl1          9.437858e-06
+swvl1         7.185549e-06
+stl1_lag7     4.403407e-06
+year          3.536051e-06
+swvl1_lag7    2.349855e-06
+tp_lag7       1.562208e-06
+swvl1_lag14   8.075721e-07
+tp            8.017113e-07
+stl1_lag14    1.765301e-07
+tp_lag14      0.000000e+00
+2026-03-17 01:29:26,745 - Initial predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2551936/gpi_2551936_initial_predictions.pkl
+2026-03-17 01:29:27,548 - Starting expanding window forecast for 2251 points...
+2026-03-17 01:29:35,379 - -- 4% done
+2026-03-17 01:29:43,286 - -- 9% done
+2026-03-17 01:29:51,286 - -- 13% done
+2026-03-17 01:29:59,306 - -- 18% done
+2026-03-17 01:30:07,380 - -- 22% done
+2026-03-17 01:30:15,408 - -- 27% done
+2026-03-17 01:30:23,475 - -- 31% done
+2026-03-17 01:30:32,387 - -- 36% done
+2026-03-17 01:30:41,450 - -- 40% done
+2026-03-17 01:30:50,539 - -- 44% done
+2026-03-17 01:30:59,674 - -- 49% done
+2026-03-17 01:31:08,965 - -- 53% done
+2026-03-17 01:31:18,299 - -- 58% done
+2026-03-17 01:31:27,658 - -- 62% done
+2026-03-17 01:31:37,211 - -- 67% done
+2026-03-17 01:31:46,737 - -- 71% done
+2026-03-17 01:31:56,371 - -- 76% done
+2026-03-17 01:32:06,058 - -- 80% done
+2026-03-17 01:32:15,772 - -- 84% done
+2026-03-17 01:32:25,426 - -- 89% done
+2026-03-17 01:32:35,162 - -- 93% done
+2026-03-17 01:32:44,952 - -- 98% done
+2026-03-17 01:32:49,999 - -- 100% done
+2026-03-17 01:32:50,010 - Expanding window predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2551936/gpi_2551936_expanding_window_predictions.pkl
+2026-03-17 01:32:50,740 - 
+Final Performance:
+2026-03-17 01:32:50,740 - RMSE: 0.00030 | MAE: 0.00024 | R2: 0.45740
+2026-03-17 01:32:55,387 - gpi: 2411002, lat: -32.77606201171875, lon: 144.73272705078125
+2026-03-17 01:32:55,400 - Training data size: 9220
+2026-03-17 01:32:55,401 - Testing data size: 2305
+2026-03-17 01:32:55,405 - 
+--- Baseline Model Performance ---
+2026-03-17 01:32:55,412 - 
+Climatology Model (Monthly Average):
+2026-03-17 01:32:55,412 -   RMSE: 0.00059
+2026-03-17 01:32:55,412 -   MAE: 0.00052
+2026-03-17 01:32:55,413 -   R2: -0.63979
+2026-03-17 01:32:55,413 -   Temporal Correlation: 0.42314
+2026-03-17 01:32:55,415 - 
+Random Noise Baseline:
+2026-03-17 01:32:55,416 -   RMSE: 0.00064
+2026-03-17 01:32:55,416 -   MAE: 0.00051
+2026-03-17 01:32:55,416 -   R2: -0.95155
+2026-03-17 01:32:55,417 -   Temporal Correlation: 0.01267
+2026-03-17 01:32:55,417 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-17 01:32:55,417 - 
+--- Training XGBRegressor ---
+2026-03-17 01:36:18,858 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.6226754511243741, 'learning_rate': 0.038647421309123776, 'max_depth': 3, 'n_estimators': 500, 'reg_alpha': 0.01316091522439673, 'reg_lambda': 5.033025941253875, 'subsample': 0.9279426688179901})
+2026-03-17 01:36:18,863 - Best cross-validation RMSE for XGBRegressor: 0.0005
+2026-03-17 01:36:18,869 - -- Initial Scores --
+2026-03-17 01:36:18,869 - RMSE: 0.00059, MAE: 0.00040, R2: -0.67363
+2026-03-17 01:36:18,870 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-17 01:36:18,870 - Feature Importance from Shap
+2026-03-17 01:36:19,803 -              mean_abs_shap
+time_step         0.000444
+LAI               0.000204
+year              0.000100
+LAI_lag7          0.000086
+sin_day           0.000066
+cos_day           0.000035
+LAI_lag14         0.000018
+stl1_lag14        0.000016
+swvl1             0.000015
+swvl1_lag14       0.000012
+swvl1_lag7        0.000010
+tp                0.000010
+stl1_lag7         0.000005
+stl1              0.000003
+tp_lag14          0.000002
+tp_lag7           0.000001
+2026-03-17 01:36:19,806 - Initial predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2411002/gpi_2411002_initial_predictions.pkl
+2026-03-17 01:36:20,515 - Starting expanding window forecast for 2305 points...
+2026-03-17 01:36:35,179 - -- 4% done
+2026-03-17 01:36:48,922 - -- 9% done
+2026-03-17 01:37:03,591 - -- 13% done
+2026-03-17 01:37:18,186 - -- 17% done
+2026-03-17 01:37:32,932 - -- 22% done
+2026-03-17 01:37:45,731 - -- 26% done
+2026-03-17 01:37:58,629 - -- 30% done
+2026-03-17 01:38:11,350 - -- 35% done
+2026-03-17 01:38:24,172 - -- 39% done
+2026-03-17 01:38:37,006 - -- 43% done
+2026-03-17 01:38:50,044 - -- 48% done
+2026-03-17 01:39:03,148 - -- 52% done
+2026-03-17 01:39:16,533 - -- 56% done
+2026-03-17 01:39:31,820 - -- 61% done
+2026-03-17 01:39:47,269 - -- 65% done
+2026-03-17 01:40:02,539 - -- 69% done
+2026-03-17 01:40:17,220 - -- 74% done
+2026-03-17 01:40:32,854 - -- 78% done
+2026-03-17 01:40:48,545 - -- 82% done
+2026-03-17 01:41:04,359 - -- 87% done
+2026-03-17 01:41:20,561 - -- 91% done
+2026-03-17 01:41:36,800 - -- 95% done
+2026-03-17 01:41:53,066 - -- 100% done
+2026-03-17 01:41:53,873 - -- 100% done
+2026-03-17 01:41:53,884 - Expanding window predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2411002/gpi_2411002_expanding_window_predictions.pkl
+2026-03-17 01:41:54,580 - 
+Final Performance:
+2026-03-17 01:41:54,581 - RMSE: 0.00026 | MAE: 0.00020 | R2: 0.68388
+2026-03-17 01:41:59,634 - gpi: 2505788, lat: -28.935745239257812, lon: 133.80947875976562
+2026-03-17 01:41:59,646 - Training data size: 8951
+2026-03-17 01:41:59,647 - Testing data size: 2238
+2026-03-17 01:41:59,650 - 
+--- Baseline Model Performance ---
+2026-03-17 01:41:59,657 - 
+Climatology Model (Monthly Average):
+2026-03-17 01:41:59,657 -   RMSE: 0.00092
+2026-03-17 01:41:59,658 -   MAE: 0.00082
+2026-03-17 01:41:59,658 -   R2: -2.73876
+2026-03-17 01:41:59,659 -   Temporal Correlation: 0.12587
+2026-03-17 01:41:59,661 - 
+Random Noise Baseline:
+2026-03-17 01:41:59,661 -   RMSE: 0.00066
+2026-03-17 01:41:59,662 -   MAE: 0.00053
+2026-03-17 01:41:59,662 -   R2: -0.94793
+2026-03-17 01:41:59,662 -   Temporal Correlation: 0.01406
+2026-03-17 01:41:59,663 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-17 01:41:59,663 - 
+--- Training XGBRegressor ---
+2026-03-17 01:45:19,931 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.6156180805881177, 'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 380, 'reg_alpha': 2.61427550964496e-05, 'reg_lambda': 0.0019140114582514285, 'subsample': 1.0})
+2026-03-17 01:45:19,936 - Best cross-validation RMSE for XGBRegressor: 0.0005
+2026-03-17 01:45:19,942 - -- Initial Scores --
+2026-03-17 01:45:19,942 - RMSE: 0.00056, MAE: 0.00045, R2: -0.39699
+2026-03-17 01:45:19,943 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-17 01:45:19,943 - Feature Importance from Shap
+2026-03-17 01:45:20,805 -              mean_abs_shap
+time_step     3.768323e-04
+year          1.485555e-04
+LAI_lag14     2.223638e-05
+cos_day       2.199152e-05
+stl1          1.365524e-05
+LAI_lag7      1.269061e-05
+LAI           1.069611e-05
+swvl1_lag7    8.481525e-06
+sin_day       8.086736e-06
+tp_lag7       7.542101e-06
+swvl1_lag14   7.482965e-06
+swvl1         6.407608e-06
+tp            5.047504e-06
+stl1_lag7     3.176520e-06
+tp_lag14      2.649062e-06
+stl1_lag14    3.632224e-07
+2026-03-17 01:45:20,808 - Initial predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2505788/gpi_2505788_initial_predictions.pkl
+2026-03-17 01:45:21,497 - Starting expanding window forecast for 2238 points...
+2026-03-17 01:45:35,877 - -- 4% done
+2026-03-17 01:45:50,288 - -- 9% done
+2026-03-17 01:46:04,814 - -- 13% done
+2026-03-17 01:46:19,411 - -- 18% done
+2026-03-17 01:46:32,487 - -- 22% done
+2026-03-17 01:46:44,633 - -- 27% done
+2026-03-17 01:46:56,830 - -- 31% done
+2026-03-17 01:47:09,097 - -- 36% done
+2026-03-17 01:47:23,646 - -- 40% done
+2026-03-17 01:47:38,568 - -- 45% done
+2026-03-17 01:47:53,478 - -- 49% done
+2026-03-17 01:48:08,270 - -- 54% done
+2026-03-17 01:48:23,074 - -- 58% done
+2026-03-17 01:48:37,990 - -- 63% done
+2026-03-17 01:48:52,939 - -- 67% done
+2026-03-17 01:49:07,928 - -- 71% done
+2026-03-17 01:49:22,983 - -- 76% done
+2026-03-17 01:49:38,011 - -- 80% done
+2026-03-17 01:49:53,158 - -- 85% done
+2026-03-17 01:50:08,340 - -- 89% done
+2026-03-17 01:50:23,667 - -- 94% done
+2026-03-17 01:50:38,873 - -- 98% done
+2026-03-17 01:50:44,650 - -- 100% done
+2026-03-17 01:50:44,660 - Expanding window predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2505788/gpi_2505788_expanding_window_predictions.pkl
+2026-03-17 01:50:45,450 - 
+Final Performance:
+2026-03-17 01:50:45,451 - RMSE: 0.00032 | MAE: 0.00027 | R2: 0.54176
+2026-03-17 01:50:49,947 - gpi: 2579593, lat: -26.03938865661621, lon: 133.28375244140625
+2026-03-17 01:50:49,960 - Training data size: 8498
+2026-03-17 01:50:49,960 - Testing data size: 2125
+2026-03-17 01:50:49,964 - 
+--- Baseline Model Performance ---
+2026-03-17 01:50:49,970 - 
+Climatology Model (Monthly Average):
+2026-03-17 01:50:49,971 -   RMSE: 0.00099
+2026-03-17 01:50:49,971 -   MAE: 0.00080
+2026-03-17 01:50:49,971 -   R2: -0.11946
+2026-03-17 01:50:49,972 -   Temporal Correlation: 0.47749
+2026-03-17 01:50:49,974 - 
+Random Noise Baseline:
+2026-03-17 01:50:49,974 -   RMSE: 0.00132
+2026-03-17 01:50:49,974 -   MAE: 0.00105
+2026-03-17 01:50:49,975 -   R2: -0.96981
+2026-03-17 01:50:49,975 -   Temporal Correlation: 0.00390
+2026-03-17 01:50:49,975 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-17 01:50:49,976 - 
+--- Training XGBRegressor ---
+2026-03-17 01:54:41,140 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.7273880361434851, 'learning_rate': 0.012318458459945973, 'max_depth': 10, 'n_estimators': 223, 'reg_alpha': 0.04915837555076663, 'reg_lambda': 10.0, 'subsample': 0.7710056772959534})
+2026-03-17 01:54:41,144 - Best cross-validation RMSE for XGBRegressor: 0.0007
+2026-03-17 01:54:41,151 - -- Initial Scores --
+2026-03-17 01:54:41,151 - RMSE: 0.00095, MAE: 0.00079, R2: -0.03509
+2026-03-17 01:54:41,152 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-17 01:54:41,153 - Feature Importance from Shap
+2026-03-17 01:54:42,353 -              mean_abs_shap
+LAI               0.000178
+time_step         0.000072
+LAI_lag7          0.000046
+sin_day           0.000036
+year              0.000033
+cos_day           0.000031
+LAI_lag14         0.000012
+swvl1             0.000008
+swvl1_lag7        0.000006
+swvl1_lag14       0.000005
+stl1_lag14        0.000005
+stl1_lag7         0.000004
+stl1              0.000002
+tp_lag14          0.000002
+tp                0.000002
+tp_lag7           0.000001
+2026-03-17 01:54:42,356 - Initial predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2579593/gpi_2579593_initial_predictions.pkl
+2026-03-17 01:54:43,063 - Starting expanding window forecast for 2125 points...
+2026-03-17 01:55:06,693 - -- 5% done
+2026-03-17 01:55:30,835 - -- 9% done
+2026-03-17 01:55:55,164 - -- 14% done
+2026-03-17 01:56:19,601 - -- 19% done
+2026-03-17 01:56:44,390 - -- 24% done
+2026-03-17 01:57:09,749 - -- 28% done
+2026-03-17 01:57:35,132 - -- 33% done
+2026-03-17 01:58:00,694 - -- 38% done
+2026-03-17 01:58:26,364 - -- 42% done
+2026-03-17 01:58:52,296 - -- 47% done
+2026-03-17 01:59:18,477 - -- 52% done
+2026-03-17 01:59:43,629 - -- 56% done
+2026-03-17 02:00:05,612 - -- 61% done
+2026-03-17 02:00:27,609 - -- 66% done
+2026-03-17 02:00:49,769 - -- 71% done
+2026-03-17 02:01:12,154 - -- 75% done
+2026-03-17 02:01:35,783 - -- 80% done
+2026-03-17 02:02:03,902 - -- 85% done
+2026-03-17 02:02:32,685 - -- 89% done
+2026-03-17 02:03:01,670 - -- 94% done
+2026-03-17 02:03:31,121 - -- 99% done
+2026-03-17 02:03:38,472 - -- 100% done
+2026-03-17 02:03:38,483 - Expanding window predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2579593/gpi_2579593_expanding_window_predictions.pkl
+2026-03-17 02:03:39,189 - 
+Final Performance:
+2026-03-17 02:03:39,190 - RMSE: 0.00053 | MAE: 0.00039 | R2: 0.68651
+2026-03-17 02:03:43,992 - gpi: 2639059, lat: -23.755521774291992, lon: 136.58676147460938
+2026-03-17 02:03:44,004 - Training data size: 8350
+2026-03-17 02:03:44,005 - Testing data size: 2088
+2026-03-17 02:03:44,008 - 
+--- Baseline Model Performance ---
+2026-03-17 02:03:44,015 - 
+Climatology Model (Monthly Average):
+2026-03-17 02:03:44,015 -   RMSE: 0.00080
+2026-03-17 02:03:44,015 -   MAE: 0.00067
+2026-03-17 02:03:44,016 -   R2: -1.17207
+2026-03-17 02:03:44,016 -   Temporal Correlation: 0.45019
+2026-03-17 02:03:44,018 - 
+Random Noise Baseline:
+2026-03-17 02:03:44,019 -   RMSE: 0.00076
+2026-03-17 02:03:44,019 -   MAE: 0.00061
+2026-03-17 02:03:44,020 -   R2: -0.97604
+2026-03-17 02:03:44,020 -   Temporal Correlation: 0.00102
+2026-03-17 02:03:44,021 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-17 02:03:44,021 - 
+--- Training XGBRegressor ---
+2026-03-17 02:06:53,863 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.8842793928156751, 'learning_rate': 0.22536351714016467, 'max_depth': 3, 'n_estimators': 111, 'reg_alpha': 2.3861377907305426e-06, 'reg_lambda': 1.5253611192381196, 'subsample': 0.6})
+2026-03-17 02:06:53,868 - Best cross-validation RMSE for XGBRegressor: 0.0010
+2026-03-17 02:06:53,872 - -- Initial Scores --
+2026-03-17 02:06:53,872 - RMSE: 0.00045, MAE: 0.00036, R2: 0.31902
+2026-03-17 02:06:53,873 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-17 02:06:53,874 - Feature Importance from Shap
+2026-03-17 02:06:54,558 -              mean_abs_shap
+time_step         0.000453
+LAI               0.000307
+year              0.000261
+LAI_lag7          0.000193
+LAI_lag14         0.000116
+sin_day           0.000097
+cos_day           0.000046
+stl1_lag14        0.000032
+tp                0.000019
+stl1              0.000013
+tp_lag14          0.000010
+stl1_lag7         0.000007
+swvl1_lag7        0.000006
+tp_lag7           0.000004
+swvl1             0.000003
+swvl1_lag14       0.000003
+2026-03-17 02:06:54,561 - Initial predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2639059/gpi_2639059_initial_predictions.pkl
+2026-03-17 02:06:55,227 - Starting expanding window forecast for 2088 points...
+2026-03-17 02:06:59,850 - -- 5% done
+2026-03-17 02:07:04,497 - -- 10% done
+2026-03-17 02:07:09,216 - -- 14% done
+2026-03-17 02:07:14,017 - -- 19% done
+2026-03-17 02:07:18,805 - -- 24% done
+2026-03-17 02:07:23,617 - -- 29% done
+2026-03-17 02:07:28,522 - -- 34% done
+2026-03-17 02:07:33,434 - -- 38% done
+2026-03-17 02:07:38,426 - -- 43% done
+2026-03-17 02:07:43,409 - -- 48% done
+2026-03-17 02:07:48,485 - -- 53% done
+2026-03-17 02:07:53,560 - -- 57% done
+2026-03-17 02:07:58,563 - -- 62% done
+2026-03-17 02:08:03,548 - -- 67% done
+2026-03-17 02:08:08,536 - -- 72% done
+2026-03-17 02:08:13,556 - -- 77% done
+2026-03-17 02:08:18,658 - -- 81% done
+2026-03-17 02:08:23,821 - -- 86% done
+2026-03-17 02:08:28,908 - -- 91% done
+2026-03-17 02:08:33,997 - -- 96% done
+2026-03-17 02:08:38,471 - -- 100% done
+2026-03-17 02:08:38,481 - Expanding window predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2639059/gpi_2639059_expanding_window_predictions.pkl
+2026-03-17 02:08:39,153 - 
+Final Performance:
+2026-03-17 02:08:39,154 - RMSE: 0.00020 | MAE: 0.00016 | R2: 0.85980
+2026-03-17 02:08:43,875 - gpi: 2620149, lat: -24.477392196655273, lon: 128.4049530029297
+2026-03-17 02:08:43,887 - Training data size: 8538
+2026-03-17 02:08:43,888 - Testing data size: 2135
+2026-03-17 02:08:43,891 - 
+--- Baseline Model Performance ---
+2026-03-17 02:08:43,898 - 
+Climatology Model (Monthly Average):
+2026-03-17 02:08:43,898 -   RMSE: 0.00084
+2026-03-17 02:08:43,899 -   MAE: 0.00059
+2026-03-17 02:08:43,899 -   R2: -0.19251
+2026-03-17 02:08:43,899 -   Temporal Correlation: -0.08112
+2026-03-17 02:08:43,902 - 
+Random Noise Baseline:
+2026-03-17 02:08:43,902 -   RMSE: 0.00107
+2026-03-17 02:08:43,902 -   MAE: 0.00086
+2026-03-17 02:08:43,903 -   R2: -0.94773
+2026-03-17 02:08:43,903 -   Temporal Correlation: 0.01397
+2026-03-17 02:08:43,903 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-17 02:08:43,904 - 
+--- Training XGBRegressor ---
+2026-03-17 02:11:57,106 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.6, 'learning_rate': 0.010285866136651875, 'max_depth': 3, 'n_estimators': 500, 'reg_alpha': 4.935859297077779e-05, 'reg_lambda': 0.003942544820344264, 'subsample': 0.7476329286864207})
+2026-03-17 02:11:57,111 - Best cross-validation RMSE for XGBRegressor: 0.0005
+2026-03-17 02:11:57,117 - -- Initial Scores --
+2026-03-17 02:11:57,118 - RMSE: 0.00068, MAE: 0.00058, R2: 0.21356
+2026-03-17 02:11:57,119 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-17 02:11:57,120 - Feature Importance from Shap
+2026-03-17 02:11:58,133 -              mean_abs_shap
+time_step         0.000313
+year              0.000096
+swvl1             0.000068
+swvl1_lag7        0.000062
+swvl1_lag14       0.000043
+sin_day           0.000035
+LAI_lag14         0.000030
+cos_day           0.000028
+stl1_lag14        0.000021
+LAI               0.000019
+LAI_lag7          0.000011
+tp                0.000006
+stl1_lag7         0.000006
+tp_lag14          0.000005
+stl1              0.000002
+tp_lag7           0.000002
+2026-03-17 02:11:58,136 - Initial predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2620149/gpi_2620149_initial_predictions.pkl
+2026-03-17 02:11:58,836 - Starting expanding window forecast for 2135 points...
+2026-03-17 02:12:18,851 - -- 5% done
+2026-03-17 02:12:38,800 - -- 9% done
+2026-03-17 02:12:58,970 - -- 14% done
+2026-03-17 02:13:19,277 - -- 19% done
+2026-03-17 02:13:39,688 - -- 23% done
+2026-03-17 02:14:00,165 - -- 28% done
+2026-03-17 02:14:20,914 - -- 33% done
+2026-03-17 02:14:41,544 - -- 37% done
+2026-03-17 02:15:02,510 - -- 42% done
+2026-03-17 02:15:23,551 - -- 47% done
+2026-03-17 02:15:44,363 - -- 52% done
+2026-03-17 02:16:05,149 - -- 56% done
+2026-03-17 02:16:26,074 - -- 61% done
+2026-03-17 02:16:47,058 - -- 66% done
+2026-03-17 02:17:08,202 - -- 70% done
+2026-03-17 02:17:29,353 - -- 75% done
+2026-03-17 02:17:50,647 - -- 80% done
+2026-03-17 02:18:12,084 - -- 84% done
+2026-03-17 02:18:33,478 - -- 89% done
+2026-03-17 02:18:55,031 - -- 94% done
+2026-03-17 02:19:16,659 - -- 98% done
+2026-03-17 02:19:24,203 - -- 100% done
+2026-03-17 02:19:24,213 - Expanding window predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2620149/gpi_2620149_expanding_window_predictions.pkl
+2026-03-17 02:19:24,913 - 
+Final Performance:
+2026-03-17 02:19:24,914 - RMSE: 0.00033 | MAE: 0.00026 | R2: 0.82128
+2026-03-17 02:19:29,569 - gpi: 2504225, lat: -28.997905731201172, lon: 138.44468688964844
+2026-03-17 02:19:29,581 - Training data size: 9001
+2026-03-17 02:19:29,582 - Testing data size: 2251
+2026-03-17 02:19:29,586 - 
+--- Baseline Model Performance ---
+2026-03-17 02:19:29,714 - 
+Climatology Model (Monthly Average):
+2026-03-17 02:19:29,715 -   RMSE: 0.00049
+2026-03-17 02:19:29,715 -   MAE: 0.00037
+2026-03-17 02:19:29,716 -   R2: 0.21943
+2026-03-17 02:19:29,716 -   Temporal Correlation: 0.53282
+2026-03-17 02:19:29,718 - 
+Random Noise Baseline:
+2026-03-17 02:19:29,719 -   RMSE: 0.00078
+2026-03-17 02:19:29,719 -   MAE: 0.00061
+2026-03-17 02:19:29,719 -   R2: -0.98416
+2026-03-17 02:19:29,720 -   Temporal Correlation: -0.00412
+2026-03-17 02:19:29,720 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-17 02:19:29,720 - 
+--- Training XGBRegressor ---
+2026-03-17 02:23:02,117 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.6, 'learning_rate': 0.29999999999999993, 'max_depth': 3, 'n_estimators': 500, 'reg_alpha': 1.1784782036027723e-05, 'reg_lambda': 5.101718978864579, 'subsample': 0.995301771137536})
+2026-03-17 02:23:02,123 - Best cross-validation RMSE for XGBRegressor: 0.0007
+2026-03-17 02:23:02,127 - -- Initial Scores --
+2026-03-17 02:23:02,127 - RMSE: 0.00055, MAE: 0.00043, R2: 0.02350
+2026-03-17 02:23:02,128 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-17 02:23:02,129 - Feature Importance from Shap
+2026-03-17 02:23:02,866 -              mean_abs_shap
+time_step     3.909210e-04
+year          1.878190e-04
+sin_day       7.616066e-05
+LAI_lag14     5.605516e-05
+LAI_lag7      4.031068e-05
+LAI           3.597784e-05
+swvl1_lag14   2.781209e-05
+cos_day       2.667483e-05
+tp            2.351825e-05
+swvl1         1.208291e-05
+stl1          1.034213e-05
+tp_lag14      9.427984e-06
+tp_lag7       5.414127e-06
+stl1_lag14    4.860250e-06
+swvl1_lag7    4.777068e-06
+stl1_lag7     1.554041e-07
+2026-03-17 02:23:02,869 - Initial predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2504225/gpi_2504225_initial_predictions.pkl
+2026-03-17 02:23:03,558 - Starting expanding window forecast for 2251 points...
+2026-03-17 02:23:13,570 - -- 4% done
+2026-03-17 02:23:23,617 - -- 9% done
+2026-03-17 02:23:33,883 - -- 13% done
+2026-03-17 02:23:44,196 - -- 18% done
+2026-03-17 02:23:54,270 - -- 22% done
+2026-03-17 02:24:04,502 - -- 27% done
+2026-03-17 02:24:14,705 - -- 31% done
+2026-03-17 02:24:24,957 - -- 36% done
+2026-03-17 02:24:35,235 - -- 40% done
+2026-03-17 02:24:45,611 - -- 44% done
+2026-03-17 02:24:56,037 - -- 49% done
+2026-03-17 02:25:06,476 - -- 53% done
+2026-03-17 02:25:17,115 - -- 58% done
+2026-03-17 02:25:27,736 - -- 62% done
+2026-03-17 02:25:38,513 - -- 67% done
+2026-03-17 02:25:49,239 - -- 71% done
+2026-03-17 02:25:59,987 - -- 76% done
+2026-03-17 02:26:11,129 - -- 80% done
+2026-03-17 02:26:21,914 - -- 84% done
+2026-03-17 02:26:32,732 - -- 89% done
+2026-03-17 02:26:43,672 - -- 93% done
+2026-03-17 02:26:54,660 - -- 98% done
+2026-03-17 02:27:00,267 - -- 100% done
+2026-03-17 02:27:00,277 - Expanding window predictions saved to ./images/curvature_no_backscatter/lagged/Australia_2504225/gpi_2504225_expanding_window_predictions.pkl
+2026-03-17 02:27:00,975 - 
+Final Performance:
+2026-03-17 02:27:00,975 - RMSE: 0.00020 | MAE: 0.00015 | R2: 0.87357

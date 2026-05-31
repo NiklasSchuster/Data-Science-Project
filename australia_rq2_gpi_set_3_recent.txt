@@ -1,0 +1,480 @@
+2026-03-24 21:09:58,802 - Logging initialized. Saving to: logs/model_logs_2026-03-24_21-09-58.txt
+2026-03-24 21:10:37,283 - Modelling slope40
+2026-03-24 21:10:41,774 - gpi: 2608428, lat: -24.926837921142578, lon: 136.90737915039062
+2026-03-24 21:10:41,824 - Training data size: 8800
+2026-03-24 21:10:41,825 - Testing data size: 2200
+2026-03-24 21:10:41,829 - 
+--- Baseline Model Performance ---
+2026-03-24 21:10:41,843 - 
+Climatology Model (Monthly Average):
+2026-03-24 21:10:41,844 -   RMSE: 0.03507
+2026-03-24 21:10:41,844 -   MAE: 0.02767
+2026-03-24 21:10:41,844 -   R2: -0.39515
+2026-03-24 21:10:41,845 -   Temporal Correlation: -0.20127
+2026-03-24 21:10:41,851 - 
+Random Noise Baseline:
+2026-03-24 21:10:41,852 -   RMSE: 0.04260
+2026-03-24 21:10:41,852 -   MAE: 0.03425
+2026-03-24 21:10:41,852 -   R2: -1.05797
+2026-03-24 21:10:41,853 -   Temporal Correlation: -0.04136
+2026-03-24 21:10:41,853 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-24 21:10:41,853 - 
+--- Training XGBRegressor ---
+2026-03-24 21:13:08,210 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.6, 'learning_rate': 0.29333784811349256, 'max_depth': 3, 'n_estimators': 191, 'reg_alpha': 0.0009125795097999364, 'reg_lambda': 1.9394870132982696e-06, 'subsample': 0.6})
+2026-03-24 21:13:08,213 - Best cross-validation RMSE for XGBRegressor: 0.3842
+2026-03-24 21:13:08,218 - -- Initial Scores --
+2026-03-24 21:13:08,218 - RMSE: 0.01966, MAE: 0.01593, R2: 0.56154
+2026-03-24 21:13:08,219 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-24 21:13:08,219 - Feature Importance from Shap
+2026-03-24 21:13:08,428 -              mean_abs_shap
+LAI_lag7          0.190720
+time_step         0.158422
+LAI               0.132596
+LAI_lag14         0.122433
+cos_day           0.091749
+sin_day           0.041995
+year              0.028496
+swvl1_lag14       0.018988
+swvl1             0.018222
+stl1_lag14        0.014824
+swvl1_lag7        0.013978
+stl1_lag7         0.012722
+tp                0.010925
+stl1              0.008330
+tp_lag14          0.005859
+tp_lag7           0.003482
+2026-03-24 21:13:09,712 - PREDICTING SURROUNDING POINTS
+2026-03-24 21:13:13,541 - gpi: 2638682, lat: -23.769874572753906, lon: 137.01380920410156
+2026-03-24 21:13:13,575 - Training data size: 8556
+2026-03-24 21:13:13,575 - Testing data size: 2139
+2026-03-24 21:13:13,579 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-24 21:13:13,585 - -- Prediction Scores with original model --
+2026-03-24 21:13:13,585 - RMSE: 0.01691, MAE: 0.01369, R2: 0.36490
+2026-03-24 21:13:13,586 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-24 21:13:13,587 - Feature Importance from Shap
+2026-03-24 21:13:13,801 -              mean_abs_shap
+LAI_lag7          0.169335
+LAI               0.167833
+LAI_lag14         0.146366
+time_step         0.144509
+cos_day           0.092052
+sin_day           0.052068
+year              0.029437
+stl1_lag14        0.019798
+stl1_lag7         0.019717
+tp                0.018295
+swvl1_lag7        0.013826
+stl1              0.011966
+swvl1_lag14       0.010698
+swvl1             0.009861
+tp_lag14          0.008906
+tp_lag7           0.004671
+2026-03-24 21:13:19,723 - gpi: 2594055, lat: -25.480152130126953, lon: 136.00006103515625
+2026-03-24 21:13:19,754 - Training data size: 8467
+2026-03-24 21:13:19,755 - Testing data size: 2117
+2026-03-24 21:13:19,758 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-24 21:13:19,764 - -- Prediction Scores with original model --
+2026-03-24 21:13:19,764 - RMSE: 0.02501, MAE: 0.02188, R2: 0.46769
+2026-03-24 21:13:19,765 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-24 21:13:19,765 - Feature Importance from Shap
+2026-03-24 21:13:19,969 -              mean_abs_shap
+time_step         0.184100
+LAI_lag7          0.172808
+LAI               0.095302
+LAI_lag14         0.092809
+cos_day           0.092161
+tp                0.036557
+year              0.032622
+sin_day           0.030041
+swvl1_lag14       0.019482
+swvl1             0.015805
+tp_lag14          0.014211
+stl1_lag14        0.012213
+swvl1_lag7        0.011703
+stl1_lag7         0.009883
+tp_lag7           0.008764
+stl1              0.007536
+2026-03-24 21:13:24,918 - gpi: 2611766, lat: -24.798681259155273, lon: 135.99098205566406
+2026-03-24 21:13:24,950 - Training data size: 8843
+2026-03-24 21:13:24,951 - Testing data size: 2211
+2026-03-24 21:13:24,955 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-24 21:13:24,961 - -- Prediction Scores with original model --
+2026-03-24 21:13:24,961 - RMSE: 0.02190, MAE: 0.01980, R2: 0.42677
+2026-03-24 21:13:24,962 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-24 21:13:24,962 - Feature Importance from Shap
+2026-03-24 21:13:25,169 -              mean_abs_shap
+LAI_lag7          0.186068
+time_step         0.162816
+LAI_lag14         0.105761
+LAI               0.099621
+cos_day           0.091821
+year              0.036313
+sin_day           0.035101
+swvl1_lag7        0.019988
+swvl1             0.018204
+swvl1_lag14       0.016359
+stl1_lag7         0.012070
+stl1_lag14        0.011615
+stl1              0.009649
+tp                0.009462
+tp_lag14          0.009253
+tp_lag7           0.003311
+2026-03-24 21:13:30,304 - gpi: 2637085, lat: -23.8306941986084, lon: 136.91299438476562
+2026-03-24 21:13:30,337 - Training data size: 8709
+2026-03-24 21:13:30,338 - Testing data size: 2178
+2026-03-24 21:13:30,341 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-24 21:13:30,347 - -- Prediction Scores with original model --
+2026-03-24 21:13:30,347 - RMSE: 0.01610, MAE: 0.01278, R2: 0.40659
+2026-03-24 21:13:30,347 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-24 21:13:30,348 - Feature Importance from Shap
+2026-03-24 21:13:30,556 -              mean_abs_shap
+LAI_lag7          0.181846
+LAI               0.160850
+LAI_lag14         0.143334
+time_step         0.142541
+cos_day           0.089323
+sin_day           0.051861
+year              0.031650
+stl1_lag14        0.020191
+stl1_lag7         0.018090
+tp                0.017773
+swvl1_lag7        0.015538
+stl1              0.011954
+swvl1_lag14       0.010906
+swvl1             0.009292
+tp_lag14          0.008820
+tp_lag7           0.004612
+2026-03-24 21:13:35,541 - gpi: 2621204, lat: -24.437013626098633, lon: 137.7138671875
+2026-03-24 21:13:35,574 - Training data size: 8449
+2026-03-24 21:13:35,574 - Testing data size: 2113
+2026-03-24 21:13:35,578 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-24 21:13:35,584 - -- Prediction Scores with original model --
+2026-03-24 21:13:35,584 - RMSE: 0.02207, MAE: 0.01944, R2: 0.19644
+2026-03-24 21:13:35,584 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-24 21:13:35,585 - Feature Importance from Shap
+2026-03-24 21:13:35,791 -              mean_abs_shap
+time_step         0.198366
+LAI_lag7          0.163866
+cos_day           0.097068
+LAI               0.089457
+LAI_lag14         0.082377
+tp                0.036883
+sin_day           0.030207
+year              0.030039
+swvl1_lag14       0.018867
+swvl1             0.017131
+swvl1_lag7        0.014227
+tp_lag14          0.014224
+stl1_lag7         0.010869
+stl1_lag14        0.010803
+stl1              0.008357
+tp_lag7           0.007700
+2026-03-24 21:13:40,793 - gpi: 2612609, lat: -24.76633644104004, lon: 136.9458770751953
+2026-03-24 21:13:40,808 - Training data size: 8642
+2026-03-24 21:13:40,808 - Testing data size: 2161
+2026-03-24 21:13:40,812 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-24 21:13:40,820 - -- Prediction Scores with original model --
+2026-03-24 21:13:40,820 - RMSE: 0.02182, MAE: 0.01823, R2: 0.41047
+2026-03-24 21:13:40,820 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-24 21:13:40,821 - Feature Importance from Shap
+2026-03-24 21:13:41,029 -              mean_abs_shap
+LAI_lag7          0.190907
+time_step         0.163276
+LAI               0.129468
+LAI_lag14         0.117216
+cos_day           0.091907
+sin_day           0.039685
+tp                0.034796
+year              0.030294
+swvl1_lag14       0.022997
+swvl1             0.019110
+stl1_lag14        0.015131
+tp_lag14          0.015021
+swvl1_lag7        0.013855
+stl1_lag7         0.013006
+stl1              0.008653
+tp_lag7           0.007692
+2026-03-24 21:13:45,899 - gpi: 2638682, lat: -23.769874572753906, lon: 137.01380920410156
+2026-03-24 21:13:45,932 - Training data size: 8556
+2026-03-24 21:13:45,932 - Testing data size: 2139
+2026-03-24 21:13:45,936 - 
+--- Baseline Model Performance ---
+2026-03-24 21:13:45,943 - 
+Climatology Model (Monthly Average):
+2026-03-24 21:13:45,944 -   RMSE: 0.02320
+2026-03-24 21:13:45,944 -   MAE: 0.01853
+2026-03-24 21:13:45,944 -   R2: -0.19567
+2026-03-24 21:13:45,945 -   Temporal Correlation: -0.03342
+2026-03-24 21:13:45,947 - 
+Random Noise Baseline:
+2026-03-24 21:13:45,948 -   RMSE: 0.02995
+2026-03-24 21:13:45,948 -   MAE: 0.02426
+2026-03-24 21:13:45,948 -   R2: -0.99233
+2026-03-24 21:13:45,949 -   Temporal Correlation: -0.00854
+2026-03-24 21:13:45,949 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-24 21:13:45,950 - 
+--- Training XGBRegressor ---
+2026-03-24 21:16:43,503 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.6, 'learning_rate': 0.016780575196856835, 'max_depth': 4, 'n_estimators': 500, 'reg_alpha': 10.0, 'reg_lambda': 10.0, 'subsample': 1.0})
+2026-03-24 21:16:43,506 - Best cross-validation RMSE for XGBRegressor: 0.4503
+2026-03-24 21:16:43,518 - -- Initial Scores --
+2026-03-24 21:16:43,518 - RMSE: 0.01254, MAE: 0.00977, R2: 0.65073
+2026-03-24 21:16:43,518 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-24 21:16:43,519 - Feature Importance from Shap
+2026-03-24 21:16:44,689 -              mean_abs_shap
+LAI               0.218109
+LAI_lag7          0.183405
+time_step         0.140157
+year              0.115742
+LAI_lag14         0.111178
+cos_day           0.040220
+swvl1_lag14       0.022329
+sin_day           0.018414
+swvl1             0.016127
+stl1              0.013484
+swvl1_lag7        0.013192
+stl1_lag14        0.009776
+stl1_lag7         0.009595
+tp                0.005220
+tp_lag14          0.001928
+tp_lag7           0.001527
+2026-03-24 21:16:49,604 - gpi: 2594055, lat: -25.480152130126953, lon: 136.00006103515625
+2026-03-24 21:16:49,635 - Training data size: 8467
+2026-03-24 21:16:49,636 - Testing data size: 2117
+2026-03-24 21:16:49,640 - 
+--- Baseline Model Performance ---
+2026-03-24 21:16:49,646 - 
+Climatology Model (Monthly Average):
+2026-03-24 21:16:49,647 -   RMSE: 0.03251
+2026-03-24 21:16:49,647 -   MAE: 0.02816
+2026-03-24 21:16:49,648 -   R2: 0.10072
+2026-03-24 21:16:49,648 -   Temporal Correlation: 0.41215
+2026-03-24 21:16:49,650 - 
+Random Noise Baseline:
+2026-03-24 21:16:49,651 -   RMSE: 0.04807
+2026-03-24 21:16:49,651 -   MAE: 0.03853
+2026-03-24 21:16:49,652 -   R2: -0.96599
+2026-03-24 21:16:49,652 -   Temporal Correlation: 0.00433
+2026-03-24 21:16:49,652 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-24 21:16:49,653 - 
+--- Training XGBRegressor ---
+2026-03-24 21:19:03,363 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.6, 'learning_rate': 0.27467116247481066, 'max_depth': 5, 'n_estimators': 50, 'reg_alpha': 0.016938339812594957, 'reg_lambda': 0.0019397102048528518, 'subsample': 0.707864277585543})
+2026-03-24 21:19:03,366 - Best cross-validation RMSE for XGBRegressor: 0.3948
+2026-03-24 21:19:03,371 - -- Initial Scores --
+2026-03-24 21:19:03,371 - RMSE: 0.03343, MAE: 0.02599, R2: 0.04916
+2026-03-24 21:19:03,371 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-24 21:19:03,372 - Feature Importance from Shap
+2026-03-24 21:19:03,634 -              mean_abs_shap
+LAI               0.208801
+time_step         0.167308
+LAI_lag14         0.137263
+LAI_lag7          0.129077
+cos_day           0.082870
+year              0.037560
+sin_day           0.030534
+stl1_lag14        0.013666
+stl1              0.011317
+swvl1             0.010403
+tp_lag14          0.010317
+swvl1_lag14       0.007352
+swvl1_lag7        0.005211
+stl1_lag7         0.004980
+tp_lag7           0.003357
+tp                0.002141
+2026-03-24 21:19:08,493 - gpi: 2611766, lat: -24.798681259155273, lon: 135.99098205566406
+2026-03-24 21:19:08,506 - Training data size: 8843
+2026-03-24 21:19:08,506 - Testing data size: 2211
+2026-03-24 21:19:08,510 - 
+--- Baseline Model Performance ---
+2026-03-24 21:19:08,517 - 
+Climatology Model (Monthly Average):
+2026-03-24 21:19:08,517 -   RMSE: 0.03038
+2026-03-24 21:19:08,517 -   MAE: 0.02616
+2026-03-24 21:19:08,518 -   R2: -0.10310
+2026-03-24 21:19:08,518 -   Temporal Correlation: 0.01559
+2026-03-24 21:19:08,520 - 
+Random Noise Baseline:
+2026-03-24 21:19:08,520 -   RMSE: 0.04132
+2026-03-24 21:19:08,521 -   MAE: 0.03351
+2026-03-24 21:19:08,521 -   R2: -1.04102
+2026-03-24 21:19:08,521 -   Temporal Correlation: -0.03281
+2026-03-24 21:19:08,522 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-24 21:19:08,522 - 
+--- Training XGBRegressor ---
+2026-03-24 21:21:45,817 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 1.0, 'learning_rate': 0.09791553740725953, 'max_depth': 3, 'n_estimators': 245, 'reg_alpha': 1e-06, 'reg_lambda': 10.0, 'subsample': 0.6})
+2026-03-24 21:21:45,820 - Best cross-validation RMSE for XGBRegressor: 0.4327
+2026-03-24 21:21:45,826 - -- Initial Scores --
+2026-03-24 21:21:45,827 - RMSE: 0.02253, MAE: 0.01893, R2: 0.39334
+2026-03-24 21:21:45,827 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-24 21:21:45,827 - Feature Importance from Shap
+2026-03-24 21:21:46,109 -              mean_abs_shap
+time_step         0.304439
+LAI               0.293082
+LAI_lag7          0.222876
+LAI_lag14         0.126138
+cos_day           0.065246
+sin_day           0.038834
+stl1_lag14        0.028623
+swvl1_lag14       0.022865
+year              0.012419
+swvl1_lag7        0.011905
+swvl1             0.010733
+stl1_lag7         0.010401
+tp                0.004954
+tp_lag7           0.001807
+stl1              0.001552
+tp_lag14          0.000735
+2026-03-24 21:21:51,016 - gpi: 2637085, lat: -23.8306941986084, lon: 136.91299438476562
+2026-03-24 21:21:51,029 - Training data size: 8709
+2026-03-24 21:21:51,030 - Testing data size: 2178
+2026-03-24 21:21:51,034 - 
+--- Baseline Model Performance ---
+2026-03-24 21:21:51,041 - 
+Climatology Model (Monthly Average):
+2026-03-24 21:21:51,041 -   RMSE: 0.02311
+2026-03-24 21:21:51,042 -   MAE: 0.01786
+2026-03-24 21:21:51,042 -   R2: -0.22240
+2026-03-24 21:21:51,042 -   Temporal Correlation: 0.06172
+2026-03-24 21:21:51,044 - 
+Random Noise Baseline:
+2026-03-24 21:21:51,044 -   RMSE: 0.02957
+2026-03-24 21:21:51,045 -   MAE: 0.02391
+2026-03-24 21:21:51,045 -   R2: -1.00204
+2026-03-24 21:21:51,046 -   Temporal Correlation: -0.01413
+2026-03-24 21:21:51,046 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-24 21:21:51,046 - 
+--- Training XGBRegressor ---
+2026-03-24 21:24:40,430 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.6, 'learning_rate': 0.07686624356883531, 'max_depth': 3, 'n_estimators': 335, 'reg_alpha': 1e-06, 'reg_lambda': 1e-06, 'subsample': 0.6})
+2026-03-24 21:24:40,432 - Best cross-validation RMSE for XGBRegressor: 0.3962
+2026-03-24 21:24:40,440 - -- Initial Scores --
+2026-03-24 21:24:40,440 - RMSE: 0.01388, MAE: 0.01157, R2: 0.55878
+2026-03-24 21:24:40,440 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-24 21:24:40,441 - Feature Importance from Shap
+2026-03-24 21:24:40,890 -              mean_abs_shap
+time_step         0.265500
+LAI_lag14         0.168822
+LAI_lag7          0.163955
+LAI               0.138733
+year              0.119599
+cos_day           0.037782
+sin_day           0.028005
+swvl1_lag14       0.015996
+stl1_lag7         0.012619
+swvl1_lag7        0.012527
+swvl1             0.011715
+stl1              0.010053
+stl1_lag14        0.007027
+tp_lag7           0.006835
+tp                0.006132
+tp_lag14          0.004377
+2026-03-24 21:24:45,887 - gpi: 2621204, lat: -24.437013626098633, lon: 137.7138671875
+2026-03-24 21:24:45,900 - Training data size: 8449
+2026-03-24 21:24:45,901 - Testing data size: 2113
+2026-03-24 21:24:45,905 - 
+--- Baseline Model Performance ---
+2026-03-24 21:24:45,912 - 
+Climatology Model (Monthly Average):
+2026-03-24 21:24:45,912 -   RMSE: 0.03996
+2026-03-24 21:24:45,913 -   MAE: 0.03280
+2026-03-24 21:24:45,913 -   R2: -1.63471
+2026-03-24 21:24:45,914 -   Temporal Correlation: -0.27760
+2026-03-24 21:24:45,916 - 
+Random Noise Baseline:
+2026-03-24 21:24:45,917 -   RMSE: 0.03508
+2026-03-24 21:24:45,917 -   MAE: 0.02863
+2026-03-24 21:24:45,917 -   R2: -1.02955
+2026-03-24 21:24:45,918 -   Temporal Correlation: -0.02738
+2026-03-24 21:24:45,918 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-24 21:24:45,919 - 
+--- Training XGBRegressor ---
+2026-03-24 21:27:15,813 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.6, 'learning_rate': 0.29999999999999993, 'max_depth': 3, 'n_estimators': 169, 'reg_alpha': 1e-06, 'reg_lambda': 10.0, 'subsample': 0.8293583558648282})
+2026-03-24 21:27:15,814 - Best cross-validation RMSE for XGBRegressor: 0.4741
+2026-03-24 21:27:15,820 - -- Initial Scores --
+2026-03-24 21:27:15,820 - RMSE: 0.03584, MAE: 0.03120, R2: -1.11947
+2026-03-24 21:27:15,820 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-24 21:27:15,821 - Feature Importance from Shap
+2026-03-24 21:27:16,000 -              mean_abs_shap
+time_step         0.270405
+LAI_lag7          0.209427
+LAI               0.192440
+cos_day           0.096271
+LAI_lag14         0.073683
+swvl1_lag14       0.037067
+sin_day           0.027640
+swvl1             0.024141
+stl1_lag14        0.020886
+year              0.020733
+swvl1_lag7        0.017314
+tp_lag14          0.011879
+stl1              0.009664
+stl1_lag7         0.005978
+tp                0.002679
+tp_lag7           0.002146
+2026-03-24 21:27:21,037 - gpi: 2612609, lat: -24.76633644104004, lon: 136.9458770751953
+2026-03-24 21:27:21,049 - Training data size: 8642
+2026-03-24 21:27:21,050 - Testing data size: 2161
+2026-03-24 21:27:21,053 - 
+--- Baseline Model Performance ---
+2026-03-24 21:27:21,060 - 
+Climatology Model (Monthly Average):
+2026-03-24 21:27:21,060 -   RMSE: 0.04016
+2026-03-24 21:27:21,061 -   MAE: 0.03304
+2026-03-24 21:27:21,061 -   R2: -0.99745
+2026-03-24 21:27:21,061 -   Temporal Correlation: -0.28428
+2026-03-24 21:27:21,063 - 
+Random Noise Baseline:
+2026-03-24 21:27:21,064 -   RMSE: 0.04046
+2026-03-24 21:27:21,064 -   MAE: 0.03262
+2026-03-24 21:27:21,065 -   R2: -1.02729
+2026-03-24 21:27:21,065 -   Temporal Correlation: -0.02690
+2026-03-24 21:27:21,065 - 
+--- Machine Learning Model Performance (with Hyperparameter Tuning) ---
+2026-03-24 21:27:21,066 - 
+--- Training XGBRegressor ---
+2026-03-24 21:29:54,741 - Best parameters for XGBRegressor: OrderedDict({'colsample_bytree': 0.6314362330674128, 'learning_rate': 0.1783564219179319, 'max_depth': 3, 'n_estimators': 50, 'reg_alpha': 1e-06, 'reg_lambda': 1e-06, 'subsample': 0.6})
+2026-03-24 21:29:54,742 - Best cross-validation RMSE for XGBRegressor: 0.4049
+2026-03-24 21:29:54,746 - -- Initial Scores --
+2026-03-24 21:29:54,746 - RMSE: 0.03127, MAE: 0.02677, R2: -0.21112
+2026-03-24 21:29:54,746 - 
+--- Feature Importance for XGBRegressor ---
+2026-03-24 21:29:54,747 - Feature Importance from Shap
+2026-03-24 21:29:54,802 -              mean_abs_shap
+LAI               0.228445
+LAI_lag14         0.183773
+LAI_lag7          0.165417
+cos_day           0.068089
+stl1_lag14        0.026562
+swvl1_lag14       0.025192
+time_step         0.021939
+sin_day           0.017478
+swvl1_lag7        0.016766
+year              0.015347
+swvl1             0.010824
+stl1_lag7         0.007854
+stl1              0.007638
+tp_lag7           0.007184
+tp                0.004447
+tp_lag14          0.000554
